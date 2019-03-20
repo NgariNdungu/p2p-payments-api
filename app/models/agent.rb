@@ -1,3 +1,2 @@
-class Agent < ApplicationRecord
-  belongs_to :user
+class Agent < User
 end
