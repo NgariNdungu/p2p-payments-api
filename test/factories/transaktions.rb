@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :transaction do
+  factory :transaktion do
     credit_account { 1 }
     debit_account { 1 }
     ca_balance { 1.5 }
