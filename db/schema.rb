@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(version: 2019_03_20_135338) do
     t.datetime "remember_created_at"
     t.integer "phone_number"
     t.string "full_name"
-    t.string "type"
     t.string "location"
     t.string "business_name"
+    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
