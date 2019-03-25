@@ -17,10 +17,11 @@ ActiveRecord::Schema.define(version: 2019_03_25_125401) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer "balance"
-    t.boolean "is_agent"
     t.bigint "user_id"
+    t.bigint "agency_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["agency_id"], name: "index_accounts_on_agency_id"
     t.index ["user_id"], name: "index_accounts_on_user_id"
   end
 
@@ -34,10 +35,10 @@ ActiveRecord::Schema.define(version: 2019_03_25_125401) do
   end
 
   create_table "transaktions", force: :cascade do |t|
-    t.integer "credit_account"
-    t.integer "debit_account"
-    t.float "ca_balance"
-    t.float "da_balance"
+    t.integer "account"
+    t.string "trans_set"
+    t.float "balance"
+    t.string "trans_type"
     t.float "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 2019_03_25_125401) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "accounts", "agencies"
   add_foreign_key "accounts", "users"
   add_foreign_key "agencies", "users"
 end
