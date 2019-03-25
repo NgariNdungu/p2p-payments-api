@@ -34,9 +34,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       t.integer :phone_number
       t.string :full_name
-      t.string  :location
-      t.string :business_name
-      t.string :type
 
       t.timestamps null: false
     end

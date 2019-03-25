@@ -1,7 +1,7 @@
 FactoryBot.define do
-  factory :agent do
+  factory :agency do
+    name { "MyString" }
     location { "MyString" }
-    business_name { "MyString" }
     user { nil }
   end
 end
