@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :account
+  has_many :accounts, as: :owner
   has_one :agency
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

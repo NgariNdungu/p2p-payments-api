@@ -1,5 +1,5 @@
 class Agency < ApplicationRecord
   belongs_to :user
-
-  validates :location, :business_name, presence: true
+  has_one :account, as: :owner
+  validates :location, :name, presence: true
 end

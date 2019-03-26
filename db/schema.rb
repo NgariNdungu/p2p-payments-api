@@ -10,22 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_26_094204) do
+ActiveRecord::Schema.define(version: 2019_03_26_123830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
     t.integer "balance"
-    t.boolean "is_agent"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_accounts_on_user_id"
+    t.integer "owner_id"
+    t.string "owner_type"
   end
 
   create_table "agencies", force: :cascade do |t|
-    t.string "business_name"
+    t.string "name"
     t.string "location"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -34,14 +33,13 @@ ActiveRecord::Schema.define(version: 2019_03_26_094204) do
   end
 
   create_table "transaktions", force: :cascade do |t|
-    t.integer "credit_account"
-    t.integer "debit_account"
-    t.float "ca_balance"
-    t.float "da_balance"
-    t.bigint "account_id"
+    t.integer "account"
+    t.string "trans_set"
+    t.float "balance"
+    t.string "trans_type"
+    t.float "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["account_id"], name: "index_transaktions_on_account_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,9 +50,6 @@ ActiveRecord::Schema.define(version: 2019_03_26_094204) do
     t.datetime "remember_created_at"
     t.string "phone_number"
     t.string "full_name"
-    t.string "location"
-    t.string "business_name"
-    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
@@ -62,7 +57,5 @@ ActiveRecord::Schema.define(version: 2019_03_26_094204) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "accounts", "users"
   add_foreign_key "agencies", "users"
-  add_foreign_key "transaktions", "accounts"
 end
