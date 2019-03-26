@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_03_25_125401) do
   end
 
   create_table "agencies", force: :cascade do |t|
-    t.string "name"
+    t.string "business_name"
     t.string "location"
     t.bigint "user_id"
     t.datetime "created_at", null: false
