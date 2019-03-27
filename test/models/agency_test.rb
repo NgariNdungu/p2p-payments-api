@@ -15,13 +15,20 @@ class AgencyTest < ActiveSupport::TestCase
     assert agency.errors[:user].present?, 'should have error on missing user'
   end
 
-  test 'should have an account' do
+  test 'should have an account after creation' do
     agency = nil
     assert_difference('Account.count') do
       agency = create(:agency)
     end
-    assert_raises(StandardError) do
-      agency.create_account
+    refute_nil agency.account, 'should have account after creation'
+  end
+
+  test 'should have a single account' do
+    agency = create(:agency)
+    account = nil
+    assert_no_difference('Account.count', 'should not create another account') do
+      account = Account.create(owner: agency)
     end
+    assert account.errors[:agency].present?, 'should have error on existing agency account'
   end
 end
