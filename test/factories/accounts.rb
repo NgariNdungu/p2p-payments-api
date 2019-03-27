@@ -8,6 +8,7 @@ FactoryBot.define do
 
     trait :for_user do
       association(:owner, factory: :user)
+
       balance {0}
     end
   end
