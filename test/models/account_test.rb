@@ -13,5 +13,4 @@ class AccountTest < ActiveSupport::TestCase
     end
   end
 
-
 end
