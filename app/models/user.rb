@@ -11,6 +11,6 @@ class User < ApplicationRecord
 
   private
   def create_account  	
-  	accounts.create!
+  	accounts.create
   end
 end
