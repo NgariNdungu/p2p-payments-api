@@ -18,11 +18,9 @@ class UserTest < ActiveSupport::TestCase
   	refute @user_with_weak_password.valid?  	
   	refute_empty @user_with_weak_password.errors[:password], "password should have minimum of 8 chars"  	
   end
-  test 'account is created on user creation' do    
-    
+  test 'account is created on user creation' do        
     assert_difference('Account.count',1) do      
-      @user=create(:user)
-      # @user.accounts.create!(attributes_for(:account))      
+      @user=create(:user)      
     end
   end
 end
