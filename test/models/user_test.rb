@@ -3,7 +3,7 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
-  # end
+	# end	
   test 'user is valid' do
   	@user=build(:user)
   	assert @user.valid?
@@ -17,5 +17,12 @@ class UserTest < ActiveSupport::TestCase
   	@user_with_weak_password=build_stubbed(:user_with_weak_password)  	
   	refute @user_with_weak_password.valid?  	
   	refute_empty @user_with_weak_password.errors[:password], "password should have minimum of 8 chars"  	
+  end
+  test 'account is created on user creation' do    
+    
+    assert_difference('Account.count',1) do      
+      @user=create(:user)
+      # @user.accounts.create!(attributes_for(:account))      
+    end
   end
 end

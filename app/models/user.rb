@@ -10,7 +10,7 @@ class User < ApplicationRecord
   after_create :create_account
 
   private
-  def create_account
-  	User.Account.create
+  def create_account  	
+  	accounts.create!
   end
 end
