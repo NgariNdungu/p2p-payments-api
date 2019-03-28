@@ -7,4 +7,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :phone_number, presence: true, uniqueness: true, length: {is: 10}, format: {with: /07[^35678]+[0-9]+/}
   validates :full_name, presence: true
+  after_create :create_account
+
+  private
+  def create_account
+  	User.Account.create
+  end
 end
