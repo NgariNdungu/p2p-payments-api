@@ -33,13 +33,14 @@ ActiveRecord::Schema.define(version: 2019_03_27_125103) do
   end
 
   create_table "transaktions", force: :cascade do |t|
-    t.integer "account"
+    t.bigint "account_id"
     t.string "trans_set"
     t.float "balance"
     t.string "trans_type"
     t.float "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_transaktions_on_account_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,4 +59,5 @@ ActiveRecord::Schema.define(version: 2019_03_27_125103) do
   end
 
   add_foreign_key "agencies", "users"
+  add_foreign_key "transaktions", "accounts"
 end
