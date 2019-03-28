@@ -17,4 +17,11 @@ class AccountTest < ActiveSupport::TestCase
       account.destroy
     end
   end
+
+  test 'should create transactions' do
+    account = create(:account, owner: @user)
+    assert_difference('Transaktion.count',2) do
+      account.transfer(attributes_for :transaktion, to: Account.first.id)
+    end
+  end
 end
