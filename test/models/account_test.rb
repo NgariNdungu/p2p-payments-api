@@ -2,11 +2,11 @@ require 'test_helper'
 
 class AccountTest < ActiveSupport::TestCase
   setup do
-    @user= create(:user, email: 'her@email.com', password: 'herpassword', phone_number: '0712345678', full_name:'her full_name')
+    @user = create(:user, email: 'her@email.com', password: 'herpassword', phone_number: '0712345678', full_name: 'her full_name')
   end
 
   test 'Should allow users to own more than one account' do
-      assert_difference('Account.count') do
+    assert_difference('Account.count') do
       create(:account, owner: @user)
     end
   end
@@ -20,8 +20,14 @@ class AccountTest < ActiveSupport::TestCase
 
   test 'should create transactions' do
     account = create(:account, owner: @user)
-    assert_difference('Transaktion.count',2) do
-      account.transfer(attributes_for :transaktion, to: Account.first.id)
+    assert_difference('Transaktion.count', 2) do
+      account.transfer(**(attributes_for :transaktion), to: Account.first.id)
     end
+  end
+
+  test 'transaction should alter balance' do
+    account = create(:account, owner: @user)
+    account.transfer(**(attributes_for :transaktion), to: Account.first.id)
+    assert_not_equal account.balance, account.reload.balance
   end
 end

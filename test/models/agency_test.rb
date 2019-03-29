@@ -17,7 +17,7 @@ class AgencyTest < ActiveSupport::TestCase
 
   test 'should have an account after creation' do
     agency = nil
-    assert_difference('Account.count') do
+    assert_difference('Account.where(owner_type: "Agency").count') do
       agency = create(:agency)
     end
     refute_nil agency.account, 'should have account after creation'

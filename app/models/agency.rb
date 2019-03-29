@@ -4,5 +4,5 @@ class Agency < ApplicationRecord
 
   validates :location, :business_name, presence: true
 
-  after_save :create_account, on: :create
+  after_create :create_account
 end
