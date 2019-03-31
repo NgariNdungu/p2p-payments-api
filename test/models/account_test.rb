@@ -19,12 +19,12 @@ class AccountTest < ActiveSupport::TestCase
     assert user.valid?
   end
 
-  test 'Should delete account ' do
-    account = create(:account, owner: @user)
-    assert_difference('Account.count', -1) do
-      account.destroy
-    end
-  end
+  # test 'Should delete account ' do
+  #   account = create(:account, owner: @user)
+  #   assert_difference('Account.count', -1) do
+  #     account.destroy
+  #   end
+  # end
 
   # test 'should create transactions' do
   #   account = create(:account, owner: @user)
@@ -40,13 +40,14 @@ class AccountTest < ActiveSupport::TestCase
   # end
 
   test 'transfer class method' do
-    to_account = create(:account)
-    from_account = create(:account, balance: 10_000)
+    user = create(:user)
+    to_account = user.accounts.create(attributes_for(:account))
+    from_account = user.accounts.create(attributes_for(:account, balance: 10_000))
     transfer_amount = 100
-    assert_difference 'to_account.balance', transfer_amount do
-      assert_difference 'from_account.balance', -transfer_amount do
+    assert_difference 'to_account.reload.balance', transfer_amount do
+      assert_difference 'from_account.reload.balance', -transfer_amount do
         assert_difference 'Transaktion.count', 2 do
-          Account.transfer(to: to_account.user.mobile_no, from: from_account.user.mobile_no, amount: transfer_amount)
+          Account.transfer(to: to_account.id, from: from_account.id, amount: transfer_amount)
         end
       end
     end

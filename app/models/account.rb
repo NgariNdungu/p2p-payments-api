@@ -23,11 +23,11 @@ class Account < ApplicationRecord
     debit_account.transaktions.create(common.merge(
       trans_type: 'debit',
       balance: debit_account.update_balance(-amount)
-    ))
-    credit_account.transaktions.create(common.merge(
-      trans_type: 'credit',
-      balance: credit_account.update_balance(amount)
-    ))
+      ))
+      credit_account.transaktions.create(common.merge(
+        trans_type: 'credit',
+        balance: credit_account.update_balance(+amount)
+      )) 
   end
 
   def self.next_trans_set
