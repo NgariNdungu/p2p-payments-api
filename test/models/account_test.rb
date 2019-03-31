@@ -54,6 +54,16 @@ class AccountTest < ActiveSupport::TestCase
   end
 
   test 'cannot transfer if user does not have enough balance' do
-    skip
+    user = create(:user)
+    to_account = user.accounts.create(attributes_for(:account))
+    from_account = user.accounts.create(attributes_for(:account, balance: 100))
+    transfer_amount = 1000
+    assert_no_difference 'to_account.reload.balance'do
+      assert_no_difference 'from_account.reload.balance'do
+        assert_no_difference 'Transaktion.count'do
+          Account.transfer(to: to_account.id, from: from_account.id, amount: transfer_amount)
+        end
+      end
+    end
   end
 end

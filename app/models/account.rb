@@ -13,21 +13,27 @@ class Account < ApplicationRecord
     (self.balance += amount).tap { |balance| update(balance: balance) }
   end
 
+
+
   def self.transfer(from:, to:, amount:)
     debit_account = find(from)
     credit_account = find(to)
-    common = {
-      trans_set: next_trans_set,
-      amount: amount
-    }
-    debit_account.transaktions.create(common.merge(
-      trans_type: 'debit',
-      balance: debit_account.update_balance(-amount)
-      ))
-      credit_account.transaktions.create(common.merge(
-        trans_type: 'credit',
-        balance: credit_account.update_balance(+amount)
-      )) 
+    if debit_account.balance < amount
+     return 'insufficient funds'
+    else
+      common = {
+        trans_set: next_trans_set,
+        amount: amount
+      }
+      debit_account.transaktions.create(common.merge(
+        trans_type: 'debit',
+        balance: debit_account.update_balance(-amount)
+        ))
+        credit_account.transaktions.create(common.merge(
+          trans_type: 'credit',
+          balance: credit_account.update_balance(+amount)
+        )) 
+    end
   end
 
   def self.next_trans_set
@@ -35,6 +41,8 @@ class Account < ApplicationRecord
   end
 
   private
+
+  
 
   def agency_already_has_an_account
     errors.add(:agency, 'can only have one account') if
