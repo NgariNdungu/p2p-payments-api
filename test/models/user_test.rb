@@ -3,9 +3,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
   test 'user is valid' do
     @user = build(:user)
     assert @user.valid?
@@ -30,23 +27,23 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'deposit' do
-    agent = create(:agent)
+    agent = create(:agency)
     user = create(:user)
     deposit_amount = 1_000
-    assert_difference 'user.defaut_account', deposit_amount do
+    assert_difference 'user.default_account', deposit_amount do
       assert_difference 'agent.account', -deposit_amount do
-        agent.deposit(amount: deposit_amount, recipient: user.mobile_no)
+        agent.deposit(amount: deposit_amount, recipient: user.phone_number)
       end
     end
   end
 
   test 'withdraw' do
-    agent = create(:agent)
+    agent = create(:agency)
     user = create(:user)
     withdraw_amount = 1_000
-    assert_difference 'user.defaut_account', -withdraw_amount do
+    assert_difference 'user.default_account', -withdraw_amount do
       assert_difference 'agent.account', withdraw_amount do
-        agent.withdraw(amount: withdraw_amount, recipient: user.mobile_no)
+        agent.withdraw(amount: withdraw_amount, recipient: user.phone_number)
       end
     end
   end
@@ -54,10 +51,11 @@ class UserTest < ActiveSupport::TestCase
   test 'send money' do
     sender = create(:loaded_user, balance: 10_000)
     recipient = create(:user)
+    binding.pry
     sent_amount = 1_000
-    assert_difference 'sender.defaut_account', -sent_amount do
-      assert_difference 'recipient.defaut_account', sent_amount do
-        sender.send_money(amount: sent_amount, to: recipient.mobile_no)
+    assert_difference 'sender.default_account', -sent_amount do
+      assert_difference 'recipient.default_account', sent_amount do
+        sender.send_money(amount: sent_amount, to: recipient.phone_number)
       end
     end
   end

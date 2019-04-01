@@ -9,7 +9,12 @@ class User < ApplicationRecord
   validates :full_name, presence: true
   after_create :create_account
 
+  def default_account
+    accounts.first
+  end
+
   private
+  
   def create_account  	
   	accounts.create
   end
