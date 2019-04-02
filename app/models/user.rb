@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  include Devise::JWT::RevocationStrategies::JTIMatcher
   has_one :account, as: :owner
   has_one :agency
   # Include default devise modules. Others available are:
