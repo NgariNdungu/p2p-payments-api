@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :accounts, as: :owner
+  has_one :account, as: :owner
   has_one :agency
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -9,13 +9,16 @@ class User < ApplicationRecord
   validates :full_name, presence: true
   after_create :create_account
 
-  def default_account
-    accounts.first
+ 
+
+  def send_money(to:, amount:)
+    to_account = User.find_by(phone_number:to).id
+    Account.transfer(to: to_account,from: self.account.id, amount: amount)
   end
 
-  private
-  
-  def create_account  	
-  	accounts.create
+  def withdraw(agent:, amount:)
+    agent_account = Agency.find(agent)
+    Account.transfer(to: agent_account, from: self.account.id, amount: amount)
   end
+
 end

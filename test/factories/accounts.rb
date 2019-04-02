@@ -1,6 +1,5 @@
 FactoryBot.define do
   factory :account do
-    balance {0}
     trait :for_agency do
       association(:owner, factory: :agency)
       balance { 1000 }

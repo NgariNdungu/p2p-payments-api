@@ -15,7 +15,7 @@ FactoryBot.define do
         balance { 1_000 }
       end
       after(:create) do |user, values|
-        user.accounts.first.update(balance: values.balance)
+        user.account.update(balance: values.balance)
       end
     end
   end
