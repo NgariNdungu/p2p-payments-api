@@ -21,40 +21,35 @@ class UserTest < ActiveSupport::TestCase
   #   refute_empty @user_with_weak_password.errors[:password], 'password should have minimum of 8 chars'
   # end
 
-  # test 'account is created on user creation' do
-  #   assert_difference('Account.count', 1) do
-  #     @user = create(:user)
-  #   end
-  # end
+  test 'deposit' do
+    agent = create(:agency)
+    user = create(:user)
+    deposit_amount = 1_000
+    assert_difference 'user.reload.account.balance', deposit_amount do
+      assert_difference 'agent.account.balance', -deposit_amount do
+        agent.deposit(amount: deposit_amount, recipient: user.phone_number)
+      end
+    end
+  end
 
-  # test 'deposit' do
-  #   agent = create(:agency)
-  #   user = create(:user)
-  #   deposit_amount = 1_000
-  #   assert_difference 'user.account', deposit_amount do
-  #     assert_difference 'agent.account', -deposit_amount do
-  #       agent.deposit(amount: deposit_amount, recipient: user.phone_number)
-  #     end
-  #   end
-  # end
-
-  # test 'withdraw' do
-  #   agent = create(:agency)
-  #   user = create(:user)
-  #   withdraw_amount = 1_000
-  #   assert_difference 'user.account', -withdraw_amount do
-  #     assert_difference 'agent.account', withdraw_amount do
-  #       user.withdraw(amount: withdraw_amount, agent: agent.id)
-  #     end
-  #   end
-  # end
+  test 'withdraw' do
+    agent = create(:agency)
+    user = create(:loaded_user, balance: 1_000)
+    withdraw_amount = 1_000
+    assert_difference 'user.account.balance', -withdraw_amount do
+      assert_difference 'agent.account.balance', withdraw_amount do
+        user.withdraw(amount: withdraw_amount, agent: agent.id)
+        agent.reload
+      end
+    end
+  end
 
   test 'send money' do
     sender = create(:loaded_user, balance: 10_000)
     recipient = create(:user)
     sent_amount = 1_000
     assert_difference 'sender.account.balance', -sent_amount do
-      assert_difference 'recipient.account.balance', sent_amount do
+      assert_difference 'recipient.reload.account.balance', sent_amount do
         sender.send_money(amount: sent_amount, to: recipient.phone_number)
       end
     end
