@@ -30,8 +30,8 @@ class UserTest < ActiveSupport::TestCase
     agent = create(:agency)
     user = create(:user)
     deposit_amount = 1_000
-    assert_difference 'user.default_account', deposit_amount do
-      assert_difference 'agent.account', -deposit_amount do
+    assert_difference 'user.default_account.balance', deposit_amount do
+      assert_difference 'agent.account.balance', -deposit_amount do
         agent.deposit(amount: deposit_amount, recipient: user.phone_number)
       end
     end
@@ -39,11 +39,12 @@ class UserTest < ActiveSupport::TestCase
 
   test 'withdraw' do
     agent = create(:agency)
-    user = create(:user)
+    user = create(:loaded_user, balance: 1_000)
     withdraw_amount = 1_000
-    assert_difference 'user.default_account', -withdraw_amount do
-      assert_difference 'agent.account', withdraw_amount do
-        agent.withdraw(amount: withdraw_amount, recipient: user.phone_number)
+    assert_difference 'user.default_account.balance', -withdraw_amount do
+      assert_difference 'agent.account.balance', withdraw_amount do
+        user.withdraw(amount: withdraw_amount, agent: agent.id)
+        agent.reload
       end
     end
   end
@@ -51,10 +52,9 @@ class UserTest < ActiveSupport::TestCase
   test 'send money' do
     sender = create(:loaded_user, balance: 10_000)
     recipient = create(:user)
-    binding.pry
     sent_amount = 1_000
-    assert_difference 'sender.default_account', -sent_amount do
-      assert_difference 'recipient.default_account', sent_amount do
+    assert_difference 'sender.default_account.balance', -sent_amount do
+      assert_difference 'recipient.default_account.balance', sent_amount do
         sender.send_money(amount: sent_amount, to: recipient.phone_number)
       end
     end
