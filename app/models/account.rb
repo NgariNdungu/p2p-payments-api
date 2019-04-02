@@ -37,7 +37,7 @@ class Account < ApplicationRecord
   def self.find_or_set_account(account)
     return account if account.is_a? Account
 
-    User.find_by(phone_number: account.to_s).try(:default_account) ||
+    User.find_by(phone_number: account.to_s).try(:account) ||
       Agency.find_by(id: account).account
   end
   
