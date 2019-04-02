@@ -13,9 +13,19 @@ class User < ApplicationRecord
     accounts.first
   end
 
+  def send_money(to:, amount:)
+    Account.transfer(from: default_account, to: to,
+                     amount: amount, type: 'transfer')
+  end
+
+  def withdraw(agent:, amount:)
+    Account.transfer(from: default_account, to: agent,
+                     amount: amount, type: 'withdrawal')
+  end
+
   private
-  
-  def create_account  	
-  	accounts.create
+
+  def create_account
+    accounts.create
   end
 end
