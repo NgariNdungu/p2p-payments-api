@@ -8,8 +8,8 @@ class TransaktionsControllerTest < ActionDispatch::IntegrationTest
 	end
   test "deposit" do
   	# binding.pry
-  	# post transactions_deposit_url, params: {data: {amount: @amount, phone: @user.phone_number}}
-  	# assert_response 200
+  	 post deposit_path, params: {data: {amount: @amount, phone: @user.phone_number}}
+  	 assert_response 200
   end
   test "withdraw" do
   	# skip
