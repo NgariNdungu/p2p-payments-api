@@ -1,12 +1,13 @@
-class LoginsController < ApplicationController
+class LoginsController < Devise::SessionsController 
+  def create
+  end
+#   new user session
+  def new
+  end
 
-    def create
-    end
 
-    def new
-    end
-
-    def destroy
+#   /logout
+  def destroy
         # revok
-    end
+  end
 end
