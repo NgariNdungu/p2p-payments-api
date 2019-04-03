@@ -11,6 +11,15 @@ class User < ApplicationRecord
   validates :full_name, presence: true
   after_create :create_account
 
+
+  # auth tokens
+  def generate_jwt
+    JWT.encode({ id: id,
+              exp: 24.days.from_now.to_i },
+             Rails.application.credentials.secret_key_base)
+  end
+  # transfers
+
   def send_money(to:, amount:)
     Account.transfer(from: account, to: to,
                      amount: amount, type: 'transfer')
