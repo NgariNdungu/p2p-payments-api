@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     resource :agency, only: [:create, :show, :update, :destroy]
   end
   scope '/transactions/' do
-  	resources :send_money, action: :send_money, controller: 'transaktions'
+    post 'withdrawal', to: 'transactions#withdraw'
+    post 'deposit', to: 'transactions#deposit'
+    post 'send_money', to: 'transactions#send_money'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
