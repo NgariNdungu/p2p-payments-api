@@ -19,7 +19,7 @@ class AgenciesController < ApplicationController
     @agency = @user.build_agency(agency_params)
 
     if @agency.save
-      render json: @agency, status: :created, location: @agency
+      render json: @agency, status: :created, location: user_agency_url(@user)
     else
       render json: @agency.errors, status: :unprocessable_entity
     end
@@ -42,12 +42,12 @@ class AgenciesController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:agency][:user_id])
+    @user = User.find(params[:user_id])
   end
 
   def set_agency
-    @agency = Agency.find(params[:id]) ||
-              @user.agency
+    set_user
+    @agency = @user.agency
   end
 
   def agency_params
