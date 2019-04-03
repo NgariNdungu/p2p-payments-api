@@ -2,13 +2,13 @@ require 'test_helper'
 
 class TransaktionsControllerTest < ActionDispatch::IntegrationTest
 	def setup
-		@agent=build_stubbed(:agency)
-		@user=build_stubbed(:user)
-		@amount=1000
+		@agent=create(:agency)
+		@user=create(:user)
+		@amount=1_000
 	end
   test "deposit" do
   	# binding.pry
-  	 post deposit_path, params: {data: {amount: @amount, phone: @user.phone_number}}
+  	 post deposit_path, params: {data: {amount: @amount, phone: @user.phone_number, agent: @agent.id, user_id: @user.id}}, as: :json
   	 assert_response 200
   end
   test "withdraw" do
