@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {sessions: 'logins', registrations: 'users'}
+  devise_for :users, controllers: { sessions: 'logins', registrations: 'users' }
   
   devise_scope :user do
     get '/login', to: 'logins#new'
-    get 'logout',  to: 'logins#destroy'
+    get 'logout', to: 'logins#destroy'
   end
-  resources :agencies, only: [:create, :show, :update, :destroy]
+  resources :users do
+    resource :agency, only: [:create, :show, :update, :destroy]
+  end
   scope '/transactions/' do
   	resources :send_money, action: :send_money, controller: 'transaktions'
   end
