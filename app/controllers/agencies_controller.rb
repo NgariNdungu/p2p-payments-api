@@ -1,12 +1,13 @@
 class AgenciesController < ApplicationController
+  before_action :set_user, only: :create
   before_action :set_agency, only: [:show, :update, :destroy]
 
   # GET /agencies
-  def index
-    @agencies = Agency.all
-
-    render json: @agencies
-  end
+  # def index
+  #   @agencies = Agency.all
+  #
+  #   render json: @agencies
+  # end
 
   # GET /agencies/1
   def show
@@ -15,7 +16,7 @@ class AgenciesController < ApplicationController
 
   # POST /agencies
   def create
-    @agency = Agency.new(agency_params)
+    @agency = @user.build_agency(agency_params)
 
     if @agency.save
       render json: @agency, status: :created, location: @agency
@@ -39,13 +40,17 @@ class AgenciesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_agency
-      @agency = Agency.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def agency_params
-      params.fetch(:agency, {})
-    end
+  def set_user
+    @user = User.find(params[:agency][:user_id])
+  end
+
+  def set_agency
+    @agency = Agency.find(params[:id]) ||
+              @user.agency
+  end
+
+  def agency_params
+    params.require(:agency).permit(:location, :business_name, :user_id)
+  end
 end
