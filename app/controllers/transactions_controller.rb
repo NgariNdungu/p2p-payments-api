@@ -1,4 +1,5 @@
 class TransactionsController < ApplicationController
+  before_action :authenticate_user!
   before_action :debit_account, only: [:withdraw, :send_money]
   before_action :credit_account, only: [:deposit, :send_money]
 
