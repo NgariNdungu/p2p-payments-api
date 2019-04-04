@@ -24,7 +24,6 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
     # skip
     sign_in create(:loaded_user)
     post send_money_url, params: {data: {amount: @amount, recipient: @user.phone_number}}
-    binding.pry
     assert_response 200
   end
 end
