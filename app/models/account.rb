@@ -14,6 +14,7 @@ class Account < ApplicationRecord
   def self.transfer(from:, to:, amount:, type: 'transfer')
     debit_account = find_or_set_account(from)
     credit_account = find_or_set_account(to)
+    amount = amount.to_f
     common = {
       trans_set: next_trans_set,
       amount: amount
