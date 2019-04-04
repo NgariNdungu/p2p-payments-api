@@ -12,13 +12,6 @@ class User < ApplicationRecord
   after_create :create_account
 
 
-
-
-  def jwt_payload
-    super.merge(user_id: self.id, exp: 24.days.from_now.to_i)
-  end
-  # transfers
-
   def send_money(to:, amount:)
     Account.transfer(from: account, to: to,
                      amount: amount, type: 'transfer')
