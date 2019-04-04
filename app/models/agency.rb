@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Agency < ApplicationRecord
   belongs_to :user
   has_one :account, as: :owner
@@ -5,11 +7,16 @@ class Agency < ApplicationRecord
   validates :location, :business_name, presence: true
 
   # OPTIMIZE: configuration value for starting agent account balance
-  after_create do
-    create_account(balance: 100_000)
-  end
+  # prefer call back notation
+  after_create :create_default_account
 
   def deposit(recipient:, amount:)
     Account.transfer(from: account, to: recipient, amount: amount, type: 'deposit')
+  end
+
+  private
+
+  def create_default_account
+    create_account(balance: 100_000)
   end
 end

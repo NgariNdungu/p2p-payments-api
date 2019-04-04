@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class TransactionsController < ApplicationController
   before_action :authenticate_user!
-  before_action :debit_account, only: [:withdraw, :send_money]
-  before_action :credit_account, only: [:deposit, :send_money]
-
+  before_action :debit_account, only: %i[withdraw send_money]
+  before_action :credit_account, only: %i[deposit send_money]
+  # see how you can push the logic here to the model
   def send_money
     txn = current_user.send_money(
       amount: transaction_params[:data][:amount],
@@ -20,8 +22,10 @@ class TransactionsController < ApplicationController
       amount: transaction_params[:data][:amount],
       agent: transaction_params[:data][:agent_number]
     )
+    # change to
+    # txn = current_user.withdraw(withdraw_params)
     if txn
-      render json:txn, status: :ok
+      render json: txn, status: :ok
     else
       render status: :bad_request
     end
@@ -44,13 +48,9 @@ class TransactionsController < ApplicationController
     @user.agency.account
   end
 
-  def credit_account
-    
-  end
+  def credit_account; end
 
-  def agent_account?
-    
-  end
+  def agent_account?; end
 
   def transaction_params
     params.permit(data: {})
