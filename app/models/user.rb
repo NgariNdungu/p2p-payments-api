@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   include Devise::JWT::RevocationStrategies::JTIMatcher
-  has_one :account, as: :owner
+  has_one :account, as: :owner, dependent: :destroy
   has_one :agency
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -14,12 +14,12 @@ class User < ApplicationRecord
 
   def send_money(to:, amount:)
     Account.transfer(from: account, to: to,
-                     amount: amount, type: 'transfer')
+                     amount: amount, trans_type: 'transfer')
   end
 
   def withdraw(agent:, amount:)
     Account.transfer(from: account, to: agent,
-                     amount: amount, type: 'withdrawal')
+                     amount: amount, trans_type: 'withdrawal')
   end
 
 end

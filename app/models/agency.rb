@@ -11,7 +11,7 @@ class Agency < ApplicationRecord
   after_create :create_default_account
 
   def deposit(recipient:, amount:)
-    Account.transfer(from: account, to: recipient, amount: amount, type: 'deposit')
+    Account.transfer(from: account, to: recipient, amount: amount, trans_type: 'deposit')
   end
 
   private

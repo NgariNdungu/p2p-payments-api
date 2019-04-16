@@ -4,12 +4,9 @@ require 'test_helper'
 
 class AccountTest < ActiveSupport::TestCase
   test 'user cannot have multiple accounts' do
-    # ActiveRecord::RecordNotSaved - expected 
-    suppress(ActiveRecord::RecordNotSaved) do
-      user = create(:user)
-      user.build_account(attributes_for(:account))
-      refute user.valid?
-    end
+    user = create(:user)
+    user.build_account(attributes_for(:account))
+    refute user.valid?
   end
 
   test 'transfer class method' do
