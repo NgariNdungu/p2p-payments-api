@@ -29,6 +29,9 @@ gem 'devise-jwt', '~> 0.5.9'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# use pdf kit to generate pdf files from html and css file
+gem 'pdfkit', '~> 0.8.2'
+gem 'wkhtmltopdf', '~> 0.1.2'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
