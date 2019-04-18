@@ -1,0 +1,15 @@
+language: ruby
+services:
+- docker
+install:
+- docker-compose build
+script:
+- docker-compose run api bin/rails test
+deploy:
+  provider: heroku
+  api_key:
+    secure: H1S9MNR8qD7LxbdlW5+WY1WLbvhBa1oyOQKQAo780W7A1EdSUrhTvIXTilVXVJzDIfLLLcVUDRFaQXmTHRN2H4yJdPeUu00vjUVUYZSr9ljoECw4DnOpOTUPXRph64OO090jeT5a6iNvuHNYtNLtTYyUt1Jzmkg7jx0WYegZOKnIP41lDMaBCzq7T0nKcXoScCcjqgmygc5F8T7clZJ2pIdQiwkHruit6gTQVNQoj5AEkiPJ3oVX81hGHbaNuj5cS+IXANytNw+9rtPQZDMTE767zY7rxR6Xg8FNVFW/EmaxJdaxWESpt3sDq83P5vzpQ+yItks8M04Xcz9JpWN0ThyRytXxySry1KG70t0lqQ5oLU9MQtcO6co55mktkqK9A430axULBpVXtk5JgtdxdiTDnctXq+aNq6AWLfSs0sxorMl7tsHbruhDD2s1l3jVHZcGSU47Lz/D8ps3i3MCOlR5kSNizddSgEkcmyk+EtIGxAKWRccvWi7RrXt8OtRlt1Uk1zPzXxJmdTPiYZXyPCs9DWr8hHEGm3vGDG+vJQTzb5k1GyLu+sS6PVOieyM+kiQkVTT/InPwdtbcGudf3uQZimFlhUgD1pMZXNnFYI60PSltY0UnTkAhI15AjLUT/MgZmJSwzSi9spwhltrcjgko+GEwXn+AaOq+0HBIeZw=
+  app: green-mamba-staging
+  on:
+    repo: NgariNdungu/p2p-payments-api
+    branch: develop
