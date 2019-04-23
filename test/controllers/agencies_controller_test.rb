@@ -3,12 +3,12 @@ require 'test_helper'
 class AgenciesControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
   setup do
-    @user = create(:user)
+    @user = create(:agency).user
+    @auth = ActionController::HttpAuthentication::Basic.encode_credentials(@user.email, @user.password)
     get login_url,
-    headers: {"Accept": "application/vnd.api+json", "email": @user.email, "password": @user.password }
+    headers: { "Accept": "application/vnd.api+json", "Authorization": @auth }
     @results = JSON.parse(response.body)
-    @token = @results["data"]["auth_token"]
-
+    @token = @results['data']['auth_token']
   end
 
   # test 'should create agency' do
@@ -25,7 +25,7 @@ class AgenciesControllerTest < ActionDispatch::IntegrationTest
   # end
 
   test 'should show agency' do
-    get user_agency_url(@user), headers: {"Accept": "application/vnd.api+json", "Authorization": "Bearer #{@token}" }
+    get user_agency_url(@user), headers: { 'Accept': 'application/vnd.api+json', 'Authorization': @auth }
     assert_response :success
   end
 

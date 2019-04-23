@@ -23,8 +23,4 @@ class User < ApplicationRecord
     Account.transfer(from: account, to: withdraw_params[:agent_number],
                      amount: withdraw_params[:amount], trans_type: 'withdrawal')
   end
-
-  def valid_amount?
-    !amount.to_s.match? /[^0-9.]/
-  end
 end
