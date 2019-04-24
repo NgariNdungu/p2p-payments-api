@@ -13,6 +13,9 @@ gem 'puma', '~> 3.11'
 gem 'devise', '~> 4.2'
 #  Token based auth with devise
 gem 'devise-jwt', '~> 0.5.9'
+
+# time travelling
+gem 'timecop', '~> 0.8.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
