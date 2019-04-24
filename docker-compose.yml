@@ -2,11 +2,16 @@ version: '3'
 services:
   api:
     build: .
+    entrypoint:
+      - sh
+      - ./wait-for-postgres.sh
+      - postgres 
     command: 'puma -C config/puma.rb'
     stdin_open: true
     tty: true
     environment:
       - RAILS_ENV=development
+      - POSTGRES_PASSWORD=mysecretpassword
     ports:
       - '80:3000'
     links:

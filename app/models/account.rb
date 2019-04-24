@@ -7,44 +7,23 @@ class Account < ApplicationRecord
   validates :balance, numericality: { greater_than_or_equal_to: 0 }
   validate :agency_already_has_an_account, on: :create
 
-  def update_balance(amount)
-    (self.balance += amount).tap { |balance| update!(balance: balance) }
-  rescue ActiveRecord::RecordInvalid
-    raise ActiveRecord::Rollback
-  end
-
-  # Avoid variable names of paramter names that might be rails key words like type
-  # maybe you could use tran_type
-  def self.transfer(from:, to:, amount:, type: 'transfer')
+  def self.transfer(from:, to:, amount:, trans_type: nil)
     debit_account = find_or_set_account(from)
     credit_account = find_or_set_account(to)
-    # casting the amount my lead to bugs here . e.g "1ooo".to_i is not 1000
-    # and waht s "money.to_i" SO in the first plase make sure the input is ok when
-    # being submitted
-    amount = amount.to_f
-    common = {
-      trans_set: next_trans_set,
-      amount: amount
-    }
-    # The below needs to be simpler to be understandable eaier
-    debit_trans = common.merge(
-      trans_type: type != 'transfer' ? type : 'debit',
-      balance: debit_account.update_balance(-amount)
-    )
-    credit_trans = common.merge(
-      trans_type: type != 'transfer' ? type : 'credit',
-      balance: credit_account.update_balance(+amount)
-    )
-    # Put thte transaction in the class where the lock is happening in this case Account
-    # deconstruct the transaction. The .save calls the  trancation. I am not sure this will work.
-    # witr a test to test failuere and see
-    # Th transaction shoud ideally be onthe object to not a class method
-    # you should create in tranaction. othersise it does not work. You should build
+    debit_account.lock!
+    credit_account.lock!
+    transaction_params = trans_params(debit_account, credit_account,
+                                      amount, trans_type)
     Account.transaction do
-      debit_account.transaktions.build(debit_trans)
-      credit_account.transaktions.build(credit_trans)
-      # then save the account to make sure the transaction runs
+      debit_account.transaktions.build(transaction_params[:debit])
+      credit_account.transaktions.build(transaction_params[:credit])
+      credit_account.save!
+      debit_account.save!
+      { debit: debit_account.transaktions.last,
+        credit: credit_account.transaktions.last }
     end
+  rescue ActiveRecord::RecordInvalid
+    debit_account.errors if debit_account.errors.present?
   end
 
   def self.next_trans_set
@@ -56,6 +35,23 @@ class Account < ApplicationRecord
 
     User.find_by(phone_number: account.to_s).try(:account) ||
       Agency.find_by(id: account).account
+  end
+
+  def self.trans_params(debit_account, credit_account, amount, trans_type)
+    common = {
+      trans_set: next_trans_set,
+      amount: amount
+    }
+    {
+      debit: common.merge(
+        trans_type: trans_type || 'debit',
+        balance: debit_account.balance -= amount
+      ),
+      credit: common.merge(
+        trans_type: trans_type || 'credit',
+        balance: credit_account.balance += amount
+      )
+    }
   end
 
   private

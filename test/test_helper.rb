@@ -11,4 +11,13 @@ class ActiveSupport::TestCase
 end
 class ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
+
+  def jsonapi_request(resource: nil, resource_type:, params:)
+    {
+      "data": {
+        "type": resource_type,
+        "attributes": params
+      }.merge(resource ? { "id": resource.id } : {})
+    }
+  end
 end

@@ -15,9 +15,13 @@ Rails.application.routes.draw do
     post 'deposit', to: 'transactions#deposit'
     post 'send_money', to: 'transactions#send_money'
   end
+<<<<<<< HEAD
 
   get '/accounts/:account_id/statement', to: 'statement#get_statement', as: 'statement'
   # get 'statement', to: 'statement#generate_pdf'
 
+=======
+  get '/statement', to: 'statement#statement'
+>>>>>>> ed88a389b624c3db25e779d21093ce41f08cc19c
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
