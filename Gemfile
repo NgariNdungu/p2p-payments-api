@@ -35,6 +35,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # https://github.com/tiagopog/jsonapi-utils
 gem 'jsonapi-utils', '~> 0.7.2'
 
+# generate pdf
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
