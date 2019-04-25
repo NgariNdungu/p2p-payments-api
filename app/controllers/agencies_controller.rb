@@ -41,9 +41,8 @@ class AgenciesController < ApplicationController
 
   private
 
-
   def set_agency
-    @agency = @current_user.agency
+    @agency = current_user.agency
   end
 
   def agency_params

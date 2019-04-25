@@ -8,7 +8,27 @@
   </head>
 
   <body>
-    <h1>Statement</h1>
-    Total balance = 20000.00
+    
+    <table border="1px" cellspacing="0">
+      <thead>
+        <th>Transaction</th>
+        <th>Account</th>
+        <th>Transaction type</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </thead>
+      <tbody>
+        <%@transaktions.each do |txn|  %>
+        <tr>
+          <td><%=txn["trans_set"]%></td>
+          <td><%=txn["account_id"]%></td>
+          <td><%= txn["trans_type"]%></td>
+          <td><%= txn["amount"]%></td>
+          <td><%= txn["created_at"]%></td>
+        </tr>         
+      </tbody>
+    </table>
+    <% end -%>
   </body>
+
 </html>

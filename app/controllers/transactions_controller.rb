@@ -3,13 +3,9 @@
 class TransactionsController < ApplicationController
   before_action :authenticate_user!
   before_action :debit_account, only: %i[withdraw send_money]
-  before_action :credit_account, only: %i[deposit send_money]
-  # see how you can push the logic here to the model
+
   def send_money
-    txn = current_user.send_money(
-      amount: transaction_params[:data][:amount],
-      to: transaction_params[:data][:recipient]
-    )
+    txn = current_user.send_money(transaction_params)
     if txn
       render json: txn, status: :ok
     else
@@ -18,12 +14,7 @@ class TransactionsController < ApplicationController
   end
 
   def withdraw
-    txn = current_user.withdraw(
-      amount: transaction_params[:data][:amount],
-      agent: transaction_params[:data][:agent_number]
-    )
-    # change to
-    # txn = current_user.withdraw(withdraw_params)
+    txn = current_user.withdraw(transaction_params)
     if txn
       render json: txn, status: :ok
     else
@@ -33,10 +24,7 @@ class TransactionsController < ApplicationController
 
   def deposit
     agent = debit_account(type: 'agency')
-    current_user.agency.deposit(
-      amount: transaction_params[:data][:amount],
-      recipient: transaction_params[:data][:phone]
-    )
+    current_user.agency.deposit(transaction_params)
     render json: agent.transaktions.last, status: :ok
   end
 
@@ -45,14 +33,20 @@ class TransactionsController < ApplicationController
   def debit_account(type: 'user')
     @user = current_user
     return @user.account if type == 'user'
+
     @user.agency.account
   end
 
-  def credit_account; end
-
-  def agent_account?; end
-
   def transaction_params
-    params.permit(data: {})
+    permitted = params.require(:data).permit(:phone, :amount, :agent_number)
+          .to_h
+    raise ActionController::Badrequest if permitted[:amount].match? /[^0-9.]/
+
+    permitted[:amount] = permitted[:amount].to_f if !permitted[:amount].match? /[^0-9.]/
+    permitted
+  end
+
+  def valid_amount?
+    !amount.to_s.match? /[^0-9.]/
   end
 end

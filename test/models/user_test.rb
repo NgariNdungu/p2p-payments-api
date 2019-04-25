@@ -32,7 +32,7 @@ class UserTest < ActiveSupport::TestCase
     deposit_amount = 1_000
     assert_difference 'user.reload.account.balance', deposit_amount do
       assert_difference 'agent.account.balance', -deposit_amount do
-        agent.deposit(amount: deposit_amount, recipient: user.phone_number)
+        agent.deposit(amount: deposit_amount, phone: user.phone_number)
       end
     end
   end
@@ -43,7 +43,7 @@ class UserTest < ActiveSupport::TestCase
     withdraw_amount = 1_000
     assert_difference 'user.account.balance', -withdraw_amount do
       assert_difference 'agent.account.balance', withdraw_amount do
-        user.withdraw(amount: withdraw_amount, agent: agent.id)
+        user.withdraw(amount: withdraw_amount, agent_number: agent.id)
         agent.reload
       end
     end
@@ -55,7 +55,7 @@ class UserTest < ActiveSupport::TestCase
     sent_amount = 1_000
     assert_difference 'sender.account.balance', -sent_amount do
       assert_difference 'recipient.reload.account.balance', sent_amount do
-        sender.send_money(amount: sent_amount, to: recipient.phone_number)
+        sender.send_money(amount: sent_amount, phone: recipient.phone_number)
       end
     end
   end

@@ -13,6 +13,9 @@ gem 'puma', '~> 3.11'
 gem 'devise', '~> 4.2'
 #  Token based auth with devise
 gem 'devise-jwt', '~> 0.5.9'
+
+# time travelling
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -38,11 +41,16 @@ gem 'wkhtmltopdf', '~> 0.1.2'
 # https://github.com/tiagopog/jsonapi-utils
 gem 'jsonapi-utils', '~> 0.7.2'
 
+# generate pdf
+# gem 'wicked_pdf'
+# gem 'wkhtmltopdf-binary'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'factory_bot_rails', '~> 5.0'
+  gem 'timecop', '~> 0.8.1'
 end
 
 group :development do

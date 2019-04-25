@@ -10,8 +10,10 @@ class Agency < ApplicationRecord
   # prefer call back notation
   after_create :create_default_account
 
-  def deposit(recipient:, amount:)
-    Account.transfer(from: account, to: recipient, amount: amount, trans_type: 'deposit')
+  def deposit(txn_parameters)
+    dep_params = txn_parameters.slice(:amount, :phone)
+    Account.transfer(from: account, to: dep_params[:phone],
+                     amount: dep_params[:amount], trans_type: 'deposit')
   end
 
   private
