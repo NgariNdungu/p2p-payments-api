@@ -1,10 +1,9 @@
 class StatementMailer < ApplicationMailer
 	default from: "juandsmithj@gmail.com"
 	# layout "mail"
-	def send_statement(recipient)
+	def send_statement(recipient, transaktions)
 		@recipient=recipient
-		
-		# attachement
+		@transaktions=transaktions		
 		mail(to: @recipient, subject: "Statement")
-	end
+	end	
 end

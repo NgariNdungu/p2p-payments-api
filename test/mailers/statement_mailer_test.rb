@@ -5,7 +5,8 @@ class StatementMailerTest < ActionMailer::TestCase
     @recipient = create(:user, email: 'user1000@domain.com')
     @recipient2 = create(:user)
     # binding.pry
-    email = StatementMailer.send_statement(@recipient.email)
+    @transaktions=Transaktion.all
+    email = StatementMailer.send_statement(@recipient.email, @transaktions)
     assert_emails 1 do
       email.deliver_now
     end

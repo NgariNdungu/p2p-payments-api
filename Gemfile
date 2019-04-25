@@ -13,6 +13,9 @@ gem 'puma', '~> 3.11'
 gem 'devise', '~> 4.2'
 #  Token based auth with devise
 gem 'devise-jwt', '~> 0.5.9'
+
+# time travelling
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -29,6 +32,9 @@ gem 'devise-jwt', '~> 0.5.9'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# use pdf kit to generate pdf files from html and css file
+gem 'pdfkit', '~> 0.8.2'
+gem 'wkhtmltopdf', '~> 0.1.2'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
@@ -36,14 +42,15 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jsonapi-utils', '~> 0.7.2'
 
 # generate pdf
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
+# gem 'wicked_pdf'
+# gem 'wkhtmltopdf-binary'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'factory_bot_rails', '~> 5.0'
+  gem 'timecop', '~> 0.8.1'
 end
 
 group :development do

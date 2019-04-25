@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   end
 
   get '/accounts/:account_id/statement', to: 'statement#get_statement', as: 'statement'
-  # get 'statement', to: 'statement#generate_pdf'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
