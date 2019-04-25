@@ -1,20 +1,20 @@
 class LoginsController < Devise::SessionsController 
+  before_action :authenticate_user!
 
-  def new
-    authenticate_or_request_with_http_basic do |email,password|
-      user = User.find_by(email: email) 
-      if user && user.valid_password?(password )
-        sign_in(:user, user)
-        render json: {data: {auth_token: request.env['warden-jwt_auth.token'] }}
-      else
-        render json: {data: {title: 'unauthorized', details: 'Incorrect username, password or missing token'}}, status: 401
-      end
+  def login
+    if user_signed_in?
+      render json: { data: { id: current_user.jti, type: 'Token', attributes: {auth_token: request.env['warden-jwt_auth.token'],token_type: 'Bearer'}} }
+    else
+      render json: { errors: [{ title: 'unauthorized', details: 'Invalid Credentials'}]}, status: 401
     end
   end
 
 
-#   /logout
-  # def destroy
-  #   revoke_jwt(current_user)
-  # end
+  # /logout
+  def logout
+    current_user.update_column(:jti, "")
+    binding.pry
+    render status: 204
+  end
+
 end

@@ -16,7 +16,9 @@ Devise.setup do |config|
 
   config.jwt do |jwt|
     jwt.secret = 'd072e3e1e225b4005ab1d409b176d2761fd0284740f2ef018f1109d5ab6af5d382e84bd862288f678290229faf1b3c45ceacda89f16d37db1dc5fb225c7f2bde'
-    jwt.dispatch_requests = [ ['GET', %r{^/login$}] ]
+    jwt.dispatch_requests = [ ['GET', %r{^/login$}]]
+    jwt.revocation_requests = [['GET', %r{^/logout$}]]
+    # jwt.revocation_strategies = { user: 'JTIMatcher' }
   end
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
