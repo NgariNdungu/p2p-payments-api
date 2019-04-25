@@ -15,7 +15,7 @@ gem 'devise', '~> 4.2'
 gem 'devise-jwt', '~> 0.5.9'
 
 # time travelling
-gem 'timecop', '~> 0.8.1'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -39,14 +39,15 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jsonapi-utils', '~> 0.7.2'
 
 # generate pdf
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
+# gem 'wicked_pdf'
+# gem 'wkhtmltopdf-binary'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'factory_bot_rails', '~> 5.0'
+  gem 'timecop', '~> 0.8.1'
 end
 
 group :development do
