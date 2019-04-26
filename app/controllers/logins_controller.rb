@@ -11,10 +11,12 @@ class LoginsController < Devise::SessionsController
 
 
   # /logout
-  def logout
-    current_user.update_column(:jti, "")
-    binding.pry
-    render status: 204
+  def logout   
+    if current_user && current_user.logout(current_user.jwt_payload, current_user)
+      render status: 204
+    else
+      render json: { errors: [{ title: 'unauthorized', details: 'Invalid Credentials'}]}, status: 401
+    end
   end
 
 end
