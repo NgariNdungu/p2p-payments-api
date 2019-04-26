@@ -13,7 +13,7 @@ class LoginsController < Devise::SessionsController
   # /logout
   def logout
     current_user.update_column(:jti, "")
-    binding.pry
+    # binding.pry
     render status: 204
   end
 
