@@ -23,4 +23,10 @@ class User < ApplicationRecord
     Account.transfer(from: account, to: withdraw_params[:agent_number],
                      amount: withdraw_params[:amount], trans_type: 'withdrawal')
   end
+
+  #revoke jwt
+  def logout(payload, user)
+    User.revoke_jwt(payload, user) unless User.jwt_revoked?(payload, user)
+  end
+
 end

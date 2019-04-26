@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'logins', registrations: 'users' }
+  devise_for :users, controllers: { sessions: 'authentications', registrations: 'users' }
   
   devise_scope :user do
-    get '/login', to: 'logins#new'
-    get '/logout',  to: 'logins#destroy'
+    get '/login', to: 'authentications#login'
+    get '/logout',  to: 'authentications#logout'
     post '/users',  to: 'users#create'
-    get 'logout', to: 'logins#destroy'
   end
   resources :users do
     resource :agency, only: [:create, :show, :update, :destroy]
