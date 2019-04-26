@@ -1,6 +1,6 @@
-class LoginsController < Devise::SessionsController 
+class AuthenticationsController < Devise::SessionsController 
   before_action :authenticate_user!
-
+ 
   def login
     if user_signed_in?
       render json: { data: { id: current_user.jti, type: 'Token', attributes: {auth_token: request.env['warden-jwt_auth.token'],token_type: 'Bearer'}} }

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'logins', registrations: 'users' }
+  devise_for :users, controllers: { sessions: 'authentications', registrations: 'users' }
   
   devise_scope :user do
-    get '/login', to: 'logins#login'
-    get '/logout',  to: 'logins#logout'
+    get '/login', to: 'authentications#login'
+    get '/logout',  to: 'authentications#logout'
     post '/users',  to: 'users#create'
   end
   resources :users do
