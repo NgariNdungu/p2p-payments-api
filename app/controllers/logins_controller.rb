@@ -9,9 +9,7 @@ class LoginsController < Devise::SessionsController
     end
   end
 
-
-  # /logout
-  def logout   
+  def logout  
     if current_user && current_user.logout(current_user.jwt_payload, current_user)
       render status: 204
     else

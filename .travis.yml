@@ -4,8 +4,8 @@ services:
 install:
 - docker-compose build
 script:
-- docker-compose run -u root -e RAILS_ENV=test api bin/rails db:create
-- docker-compose run -u root api bin/rails test
+- docker-compose run -u root -e RAILS_ENV=test -e CI=true api bin/rails db:create
+- docker-compose run -u root -e CI=true api bin/rails test
 deploy:
   provider: heroku
   api_key:
@@ -14,3 +14,5 @@ deploy:
   on:
     repo: NgariNdungu/p2p-payments-api
     branch: develop
+  run:
+    - "bin/rails db:migrate"
