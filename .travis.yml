@@ -4,8 +4,8 @@ services:
 install:
 - docker-compose build
 script:
-- docker-compose run -e RAILS_ENV=test -e CI=true api bin/rails db:create
-- docker-compose run api bin/rails test
+- docker-compose run -u root -e RAILS_ENV=test -e CI=true api bin/rails db:create
+- docker-compose run -u root api bin/rails test
 deploy:
   provider: heroku
   api_key:
