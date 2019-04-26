@@ -12,6 +12,6 @@ class StatementMailerTest < ActionMailer::TestCase
     assert_equal([@recipient.email], email.to)
     assert_equal(["statements@greenmamba.com"], email.from)
     assert_equal('Statement', email.subject)
-    
+    assert email.body.present?
   end
 end
