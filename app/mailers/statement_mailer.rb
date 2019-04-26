@@ -1,5 +1,5 @@
 class StatementMailer < ApplicationMailer
-	default from: "juandsmithj@gmail.com"
+	default from: "statements@greenmamba.com"
 	# layout "mail"
 	def send_statement(recipient, transaktions)
 		@recipient=recipient
