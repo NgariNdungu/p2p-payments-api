@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get '/login', to: 'authentications#login'
     get '/logout',  to: 'authentications#logout'
     post '/users',  to: 'users#create'
+    get '/users/user_id/accounts', to: 'users#show', as: 'user_account'
   end
   resources :users do
     resource :agency, only: [:create, :show, :update, :destroy]
