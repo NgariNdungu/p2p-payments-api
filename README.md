@@ -24,7 +24,7 @@ $ docker-compose up -d
 ```
 
 ## Test
-1. [Run app](##run-local).
+1. [Run app](#run-local).
 2. Run tests.
 ```bash
 $ docker-compose exec api bundle exec guard
