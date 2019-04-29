@@ -26,4 +26,11 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
     post send_money_url, params: {data: {amount: @amount, phone: @user.phone_number}}
     assert_response 200
   end
+
+  test 'get report' do
+    # TODO: Add auth to request. Expects list of transactions
+    skip
+    get dailyreport_url
+    assert_response 200
+  end
 end

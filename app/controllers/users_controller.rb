@@ -6,7 +6,6 @@ class UsersController < Devise::SessionsController
     if @user.save
       jsonapi_render json: @user, status: :created
     else
-      binding.pry
       jsonapi_render_errors json: @user.errors, status: :bad_request
     end
   end

@@ -28,6 +28,10 @@ class TransactionsController < ApplicationController
     render json: agent.transaktions.last, status: :ok
   end
 
+  def get_report
+    render json: current_user.get_report(current_user.account), status: :ok
+  end
+
   private
 
   def debit_account(type: 'user')
