@@ -23,6 +23,7 @@ class Account < ApplicationRecord
         credit: credit_account.transaktions.last }
     end
   rescue ActiveRecord::RecordInvalid
+    # TODO: return and use the relevant error on failed transactions
     debit_account.errors if debit_account.errors.present?
   end
 

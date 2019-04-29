@@ -7,7 +7,7 @@ class AccountTest < ActiveSupport::TestCase
     skip
     user = create(:user)
     user.build_account(attributes_for(:account))
-    # TODO: prevent deletion and creation of a new account
+    # TODO: test that account is not recreated
     refute user.valid?
   end
 
