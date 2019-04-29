@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   include Devise::JWT::RevocationStrategies::JTIMatcher
+  # FIXME: relation creates a new account even if an account exists
   has_one :account, as: :owner, dependent: :destroy
   has_one :agency
   # Include default devise modules. Others available are:
@@ -12,6 +13,8 @@ class User < ApplicationRecord
   validates :full_name, presence: true
   after_create :create_account
 
+  # OPTIMIZE: refactor how parameters are handled
+  # remove coupling with controller
   def send_money(txn_parameters)
     send_params = txn_parameters.slice(:phone, :amount)
     Account.transfer(from: account, to: send_params[:phone],
@@ -31,5 +34,4 @@ class User < ApplicationRecord
   def logout(payload, user)
     User.revoke_jwt(payload, user) unless User.jwt_revoked?(payload, user)
   end
-
 end
