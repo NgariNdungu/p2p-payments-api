@@ -14,4 +14,6 @@ class StatementMailerTest < ActionMailer::TestCase
     assert_equal('Statement', email.subject)
     assert email.body.present?
   end
+  test "mail queuing" do
+  end
 end
