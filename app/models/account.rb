@@ -7,6 +7,20 @@ class Account < ApplicationRecord
   validates :balance, numericality: { greater_than_or_equal_to: 0 }
   validate :agency_already_has_an_account, on: :create
 
+  # Get transaction for a specific account for the last 24hours
+  def self.get_report(account)
+    reports = []
+    report = {}
+    transactions = Transaktion.trasactions_for_last_24_hours.where(account: account)
+    transactions.each do |transaction_object|
+      report[:type] = transaction_object.trans_type
+      report[:amount] = transaction_object.amount
+      report[:time] = transaction_object.created_at
+      report[:transaction_code] = transaction_object.trans_set
+      reports << report
+    end
+  end
+
   def self.transfer(from:, to:, amount:, trans_type: nil)
     debit_account = find_or_set_account(from)
     credit_account = find_or_set_account(to)
@@ -23,6 +37,7 @@ class Account < ApplicationRecord
         credit: credit_account.transaktions.last }
     end
   rescue ActiveRecord::RecordInvalid
+    # TODO: return and use the relevant error on failed transactions
     debit_account.errors if debit_account.errors.present?
   end
 

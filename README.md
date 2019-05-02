@@ -1,24 +1,35 @@
-# README
+# P2P PAYMENTS API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A peer to peer money transfer system built using rails on docker.
 
-Things you may want to cover:
+[see documentation](https://app.swaggerhub.com/apis-docs/NgariNdungu/green-mamba-re/1.0.0).
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+1. [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+2. [Docker-compose](https://docs.docker.com/compose/)
+## Run local
 
-* Configuration
+1. Clone
+```bash
+$ git clone https://github.com/NgariNdungu/p2p-payments-api.git
+```
+2. cd into project directory and build image
+```bash
+$ cd p2p-payments-api && docker-compose build
+```
+3. Run
+```bash
+$ docker-compose up -d
+```
 
-* Database creation
+## Test
+1. [Run app](#run-local).
+2. Run tests.
+```bash
+$ docker-compose exec api bundle exec guard
+```
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...

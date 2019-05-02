@@ -1,41 +1,43 @@
 class AgenciesController < ApplicationController
+  include JSONAPI::Utils
   before_action :authenticate_user!
   before_action :set_agency, only: [:show, :update, :destroy]
 
   # GET /agencies
-  def index
-    @agencies = Agency.all
-  
-    render json: @agencies
-  end
+  # def index
+  #   @agencies = Agency.all
+  #   render json: @agencies
+  # end
 
   # GET /agencies/1
   def show
-    render json: @agency
+    jsonapi_render json: @agency
   end
 
   # POST /agencies
   def create
-    @agency = @user.build_agency(agency_params)
+    @agency = current_user.build_agency(resource_params)
 
     if @agency.save
-      render json: @agency, status: :created, location: user_agency_url(@user)
+      # TODO: set location header
+      jsonapi_render json: @agency, status: :created
     else
-      render json: @agency.errors, status: :unprocessable_entity
+      jsonapi_render json: @agency.errors, status: :bad_request
     end
   end
 
   # PATCH/PUT /agencies/1
   def update
-    if @agency.update(agency_params)
-      render json: @agency
+    if @agency.update(resource_params)
+      jsonapi_render json: @agency
     else
-      render json: @agency.errors, status: :unprocessable_entity
+      jsonapi_render json: @agency.errors, status: :bad_request
     end
   end
 
   # DELETE /agencies/1
   def destroy
+    # FIXME: destroy not working with jsonapi-utils
     @agency.destroy
   end
 
@@ -43,9 +45,5 @@ class AgenciesController < ApplicationController
 
   def set_agency
     @agency = current_user.agency
-  end
-
-  def agency_params
-    params.require(:agency).permit(:location, :business_name, :user_id)
   end
 end

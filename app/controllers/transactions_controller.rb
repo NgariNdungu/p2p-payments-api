@@ -1,14 +1,17 @@
 # frozen_string_literal: true
 
 class TransactionsController < ApplicationController
+  # TODO: use jsonapi for responses
   before_action :authenticate_user!
-  before_action :debit_account, only: %i[withdraw send_money]
 
+  # OPTIMIZE: return appropriate debit/credit transaction
+  # currently returns a list with the full debit and credit
   def send_money
     txn = current_user.send_money(transaction_params)
     if txn
       render json: txn, status: :ok
     else
+      # FIXME: return appropriate error content
       render status: :bad_request
     end
   end
@@ -23,19 +26,16 @@ class TransactionsController < ApplicationController
   end
 
   def deposit
-    agent = debit_account(type: 'agency')
-    current_user.agency.deposit(transaction_params)
-    render json: agent.transaktions.last, status: :ok
+    # TODO: handle errors 
+    txn = current_user.agency.deposit(transaction_params)
+    render json: txn, status: :ok
+  end
+
+  def get_report
+    render json: current_user.get_report(current_user.account), status: :ok
   end
 
   private
-
-  def debit_account(type: 'user')
-    @user = current_user
-    return @user.account if type == 'user'
-
-    @user.agency.account
-  end
 
   def transaction_params
     permitted = params.require(:data).permit(:phone, :amount, :agent_number)
@@ -44,9 +44,5 @@ class TransactionsController < ApplicationController
 
     permitted[:amount] = permitted[:amount].to_f if !permitted[:amount].match? /[^0-9.]/
     permitted
-  end
-
-  def valid_amount?
-    !amount.to_s.match? /[^0-9.]/
   end
 end

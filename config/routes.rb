@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   end
 
   get '/accounts/:account_id/statement', to: 'statement#get_statement', as: 'statement'
+  get '/dailyreport', to: 'transactions#get_report'
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

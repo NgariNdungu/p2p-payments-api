@@ -10,6 +10,7 @@ class Agency < ApplicationRecord
   # prefer call back notation
   after_create :create_default_account
 
+  # OPTIMIZE: refactor how parameters are handled
   def deposit(txn_parameters)
     dep_params = txn_parameters.slice(:amount, :phone)
     Account.transfer(from: account, to: dep_params[:phone],
