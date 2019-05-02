@@ -26,12 +26,13 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
   end
   test "show user info" do
-    
+    skip
   end
   test "delete account" do
-
+    skip
   end
   test "update user" do
-    
+    skip
   end
+  test 
 end
