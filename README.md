@@ -30,6 +30,6 @@ $ docker-compose up -d
 $ docker-compose exec api bundle exec guard
 ```
 
+## Project Wrap up
 
-
-
+[Wrap Up](https://github.com/NgariNdungu/p2p-payments-api/blob/develop/project-wrapup.md)
