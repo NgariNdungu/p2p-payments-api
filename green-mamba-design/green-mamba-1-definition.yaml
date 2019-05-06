@@ -1,0 +1,879 @@
+---
+openapi: 3.0.0
+info:
+  title: P2P money transfer API
+  description: "This API enables users on the system to send money to each other.\n\
+    A user can also register an agency to facilitate deposits and withdrawals for\
+    \ \nother users.\n\nAll endpoints except `/users` will need to be authenticated\
+    \ with an auth token. \nThe Auth token is generated via basic http authentication\
+    \ at `/login`. \nPlease note that the token expires after 5 mins.\n\nThe API conforms,\
+    \ as much as possible to the [JSON:API](https://jsonapi.org/format)\nspecification."
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/Maltom/green_mamba_api/1.0.0
+  description: SwaggerHub API Auto Mocking
+paths:
+  /logout:
+    get:
+      summary: Logout the authenticated user
+      description: Clear out the current user session and invalidate their token
+      responses:
+        204:
+          description: User logged out
+        401:
+          $ref: '#/components/responses/Unauthorized'
+          description: User already logged out or bad authentication
+      security:
+      - tokenAuth: []
+  /dailyreport:
+    get:
+      summary: Returns a report of the current day's  user's account(s) activities
+      responses:
+        200:
+          description: Successful
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  total deposits:
+                    type: integer
+                    example: 40000
+                  total withdrawals:
+                    type: integer
+                    example: 20000
+              examples:
+                report:
+                  value:
+                    total deposits: 22
+                    total withdrawals: 94
+        401:
+          $ref: '#/components/responses/Unauthorized'
+      security:
+      - tokenAuth: []
+  /login:
+    get:
+      summary: Get authentication token
+      responses:
+        200:
+          description: Token generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      auth_token:
+                        type: string
+                        example: dafaf%%%...
+        401:
+          $ref: '#/components/responses/Unauthorized'
+      security:
+      - basicAuth: []
+  /users/{user_id}/accounts:
+    get:
+      summary: Return account information of all accounts owned by the user
+      responses:
+        200:
+          description: Successful
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/Accounts'
+              examples:
+                Account:
+                  value:
+                    data:
+                    - type: account
+                      id: some text
+                      attributes:
+                        account_number: 68
+                        balance: 53.44
+                    - type: account
+                      id: some text
+                      attributes:
+                        account_number: Agent001
+                        balance: 47.64
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/Default'
+      security:
+      - tokenAuth: []
+    parameters:
+    - name: user_id
+      in: path
+      required: true
+      schema:
+        type: string
+  /users/{user_id}:
+    get:
+      summary: Show details of the authenticated user
+      responses:
+        200:
+          description: Success
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: user
+                      id:
+                        type: string
+                        example: "1"
+                      attributes:
+                        $ref: '#/components/schemas/SingleUser'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+      security:
+      - tokenAuth: []
+    delete:
+      summary: Deletes an existing user account.
+      description: ""
+      responses:
+        204:
+          description: Deleted Successfully
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        500:
+          $ref: '#/components/responses/Default'
+    patch:
+      summary: Updates users's details
+      requestBody:
+        content:
+          application/vnd.api+json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      example: agent
+                    id:
+                      type: string
+                      example: "001"
+                    attributes:
+                      $ref: '#/components/schemas/User'
+        required: true
+      responses:
+        200:
+          description: Updated Successfully
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: "1"
+                      type:
+                        type: string
+                        example: user
+                      attributes:
+                        $ref: '#/components/schemas/User'
+        400:
+          description: Bad request
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        status:
+                          type: string
+                          example: "400"
+                        title:
+                          type: string
+                          example: Bad Request
+                        detail:
+                          type: string
+                          example: check your parameters well
+    parameters:
+    - name: user_id
+      in: path
+      required: true
+      schema:
+        type: string
+  /transactions/deposit:
+    post:
+      summary: Top up a user's account
+      description: This endpoint is only accessible if the authenticated user has
+        a valid agency account
+      requestBody:
+        content:
+          application/vnd.api+json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      example: deposit
+                    attributes:
+                      $ref: '#/components/schemas/DepositTransaction'
+            examples:
+              Deposit:
+                value:
+                  data:
+                    type: some text
+                    attributes:
+                      amount: 10000
+                      phone: "2828282"
+                      agent_number: agent001
+        required: true
+      responses:
+        200:
+          description: Deposit successful
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: transaction
+                      id:
+                        type: string
+                        example: RTYGHJ4
+                      attributes:
+                        $ref: '#/components/schemas/DepositTransaction'
+              examples:
+                Deposit transaction:
+                  value:
+                    data:
+                      type: deposit
+                      id: some text
+                      attributes:
+                        amount: "383948"
+                        phone: "38383"
+                        agent_number: agent001
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+      security:
+      - tokenAuth: []
+  /transactions/withdrawal:
+    post:
+      summary: Withdraw cash from an agent
+      requestBody:
+        content:
+          application/vnd.api+json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  example: withdrawal
+                attributes:
+                  $ref: '#/components/schemas/Withdrawal'
+        required: true
+      responses:
+        200:
+          description: Successful withdrawal
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    example: withdrawal
+                  id:
+                    type: string
+                    example: ABCD456
+                  attributes:
+                    $ref: '#/components/schemas/Withdrawal'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+      security:
+      - tokenAuth: []
+  /transactions/send_money:
+    post:
+      summary: Transfer money to another user's account
+      requestBody:
+        description: __recipient__ phone or email, and **amount** to send
+        content:
+          application/vnd.api+json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  example: transfer
+                attributes:
+                  $ref: '#/components/schemas/TransferTransaction'
+        required: true
+      responses:
+        200:
+          description: Transfer successful
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    example: transfer
+                  id:
+                    type: string
+                    example: GGDF456
+                  attributes:
+                    $ref: '#/components/schemas/TransferTransaction'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+      security:
+      - tokenAuth: []
+  /users:
+    post:
+      summary: Create a new user account
+      description: ""
+      requestBody:
+        content:
+          application/vnd.api+json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      example: user
+                    attributes:
+                      $ref: '#/components/schemas/User'
+            examples:
+              User registration:
+                value:
+                  data:
+                    type: some text
+                    attributes:
+                      full_name: username1
+                      email: email@me.co
+                      phone: "254838383"
+                      password: sjsjsueu849!
+        required: true
+      responses:
+        201:
+          description: User created
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: "1"
+                      type:
+                        type: string
+                        example: user
+                      attributes:
+                        $ref: '#/components/schemas/User'
+              examples:
+                Agent Data:
+                  value:
+                    data:
+                      id: some text
+                      type: user
+                      attributes:
+                        full_name: some guy
+                        phone: "0701100110"
+                        email: user@example.com
+                        password: pa$$word
+        400:
+          description: Bad request
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        status:
+                          type: string
+                          example: "400"
+                        title:
+                          type: string
+                          example: Bad request
+                        detail:
+                          type: string
+                          example: email cannot be blank
+      security:
+      - tokenAuth: []
+  /accounts/{account_id}/statement:
+    get:
+      summary: Request an email of all transactions on a user's account
+      parameters:
+      - name: start_date
+        in: query
+        description: Request records starting from this date. Defaults to start of
+          current month
+        schema:
+          format: date
+          type: string
+      - name: end_date
+        in: query
+        description: Request records upto this date. Defaults to today's date
+        schema:
+          format: date
+          type: string
+      responses:
+        204:
+          description: Processing request
+        401:
+          $ref: '#/components/responses/Unauthorized'
+      security:
+      - tokenAuth: []
+    parameters:
+    - name: account_id
+      in: path
+      required: true
+      schema:
+        type: string
+  /users/{user_id}/agency:
+    get:
+      summary: Show details of the user's agency account
+      description: ""
+      responses:
+        200:
+          description: Success
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: agent
+                      id:
+                        type: string
+                        example: "1"
+                      attributes:
+                        $ref: '#/components/schemas/SingleAgent'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+      security:
+      - tokenAuth: []
+    post:
+      summary: Create a new agent account
+      requestBody:
+        content:
+          application/vnd.api+json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      example: agent
+                    attributes:
+                      $ref: '#/components/schemas/PartialAgent'
+        required: true
+      responses:
+        201:
+          description: User created
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: "1"
+                      type:
+                        type: string
+                        example: agent
+                      attributes:
+                        $ref: '#/components/schemas/Agent'
+        400:
+          description: Bad request
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        status:
+                          type: string
+                          example: "400"
+                        title:
+                          type: string
+                          example: Bad Request
+                        detail:
+                          type: string
+                          example: email cannot be blank
+    delete:
+      summary: Deletes an existing agent account
+      description: This deletes an existing agent account. The float balance will
+        be debited from the agent account to the user running the agency. Action by
+        Admin only
+      responses:
+        204:
+          description: Deleted Successfully
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Account deleted succesfully
+        401:
+          $ref: '#/components/responses/Unauthorized'
+        500:
+          $ref: '#/components/responses/Default'
+    patch:
+      summary: Updates an agent's details
+      requestBody:
+        content:
+          application/vnd.api+json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      example: agent
+                    id:
+                      type: string
+                      example: AG3NT
+                    attributes:
+                      $ref: '#/components/schemas/PartialAgent'
+        required: true
+      responses:
+        200:
+          description: Updated successfully
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: agent
+                      id:
+                        type: string
+                        example: AG3NT
+                      attributes:
+                        $ref: '#/components/schemas/Agent'
+        400:
+          description: Bad request
+          content:
+            application/vnd.api+json:
+              schema:
+                type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        status:
+                          type: string
+                          example: "400"
+                        title:
+                          type: string
+                          example: Bad Request
+                        detail:
+                          type: string
+                          example: check your parameters
+        500:
+          $ref: '#/components/responses/Default'
+    parameters:
+    - name: user_id
+      in: path
+      required: true
+      schema:
+        type: string
+components:
+  schemas:
+    PartialUser:
+      required:
+      - full_name
+      - email
+      - phone
+      type: object
+      properties:
+        full_name:
+          type: string
+          example: some guy
+        phone:
+          type: string
+          example: "0701100110"
+        email:
+          format: email
+          type: string
+    SingleUser:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/Balance'
+      properties:
+        full_name:
+          type: string
+          example: some guy
+        phone:
+          type: string
+          example: "0701100110"
+        email:
+          format: email
+          type: string
+    Balance:
+      type: object
+      properties:
+        balance:
+          format: float
+          type: number
+          example: 1000
+    Account:
+      type: object
+      properties:
+        account_number:
+          format: int32
+          type: integer
+          example: 37373
+        balance:
+          format: float
+          type: number
+          example: 49999
+    Accounts:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: account
+              id:
+                type: string
+                example: "34567"
+              attributes:
+                $ref: '#/components/schemas/Account'
+    User:
+      allOf:
+      - $ref: '#/components/schemas/PartialUser'
+      - $ref: '#/components/schemas/Password'
+    Withdrawal:
+      required:
+      - agent_number
+      - amount
+      - phone
+      type: object
+      properties:
+        amount:
+          type: string
+          example: "1000"
+        agent_number:
+          type: string
+          example: "5674"
+        phone:
+          type: string
+    Password:
+      required:
+      - password
+      type: object
+      properties:
+        password:
+          format: password
+          type: string
+    DepositTransaction:
+      required:
+      - amount
+      type: object
+      properties:
+        amount:
+          type: string
+          example: "1000"
+        phone:
+          type: string
+          example: "0711010101"
+        agent_number:
+          type: string
+    TransferTransaction:
+      required:
+      - amount
+      - sender
+      - recipient
+      type: object
+      properties:
+        recipient:
+          description: The phone number or email of the user to receive money
+          type: string
+          example: guy@guy.com | 0711001100
+        amount:
+          description: The amount to send
+          type: string
+          example: 1000
+        sender:
+          description: The phone number or email of the user sending money
+          type: string
+          example: other@guy.com
+    PartialAgent:
+      allOf:
+      - required:
+        - business_name
+        - location
+        type: object
+        properties:
+          business_name:
+            type: string
+            example: m base
+          location:
+            type: string
+            example: kwa stima
+    Agent:
+      allOf:
+      - $ref: '#/components/schemas/PartialAgent'
+      - required:
+        - agent_number
+        type: object
+        properties:
+          agent_number:
+            type: string
+            example: AG3NT
+    AgentBalance:
+      type: object
+      properties:
+        float_balance:
+          type: string
+          example: "10000"
+    SingleAgent:
+      allOf:
+      - $ref: '#/components/schemas/Agent'
+      - $ref: '#/components/schemas/AgentBalance'
+  responses:
+    Unauthorized:
+      description: Could not authenticate the user
+      content:
+        application/vnd.api+json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      example: "401"
+                    title:
+                      type: string
+                      example: Unauthorized
+                    details:
+                      type: string
+                      example: Incorrect username, password or missing token
+    BadRequest:
+      description: Bad request
+      content:
+        application/vnd.api+json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      example: "400"
+                    title:
+                      type: string
+                      example: Bad Request
+                    detail:
+                      type: string
+                      example: You have insufficient funds
+    Default:
+      description: Server error
+      content:
+        application/vnd.api+json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      example: "500"
+                    title:
+                      type: string
+                      example: Internal Server Error
+                    detail:
+                      type: string
+                      example: An error occured on our side, please try again later
+    NotFound:
+      description: Not found
+      content:
+        application/vnd.api+json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                example: []
+  securitySchemes:
+    tokenAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    basicAuth:
+      type: http
+      scheme: basic
+security:
+- tokenAuth: []
