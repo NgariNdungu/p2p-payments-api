@@ -1,0 +1,32 @@
+version: '3'
+services:
+  api:
+    build: .
+    entrypoint:
+      - sh
+      - ./wait-for-postgres.sh
+      - postgres 
+    command: 'puma -C config/puma.rb'
+    stdin_open: true
+    tty: true
+    environment:
+      - RAILS_ENV=development
+      - POSTGRES_PASSWORD=mysecretpassword
+    ports:
+      - '80:3000'
+    links:
+      - postgres
+    volumes:
+      - .:/home/deploy/app
+
+  postgres:
+    image: postgres:9.6.2-alpine
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
+    ports:
+      - '5432'
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:

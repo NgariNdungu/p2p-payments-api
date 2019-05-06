@@ -1,0 +1,2912 @@
+Started GET "/" for 172.18.0.1 at 2019-04-17 08:16:09 +0000
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "app_development" does not exist
+):
+  
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 172.18.0.1 at 2019-04-17 08:16:09 +0000
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "app_development" does not exist
+):
+  
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (742.0ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (581.9ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+Started GET "/" for 172.18.0.1 at 2019-04-17 08:17:47 +0000
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 172.18.0.1 at 2019-04-17 08:17:47 +0000
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (84.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (75.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to DeviseCreateUsers (20190320090349)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (72.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "phone_number" integer, "full_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190320090349_devise_create_users.rb:5
+  [1m[35m (35.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190320090349_devise_create_users.rb:41
+  [1m[35m (29.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_phone_number" ON "users"  ("phone_number")[0m
+  ↳ db/migrate/20190320090349_devise_create_users.rb:42
+  [1m[35m (37.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190320090349_devise_create_users.rb:43
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190320090349"]]
+  ↳ bin/rails:4
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateAccounts (20190320100604)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (49.1ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" bigserial primary key, "balance" integer, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b1e30bebc8"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20190320100604_create_accounts.rb:3
+  [1m[35m (35.9ms)[0m  [1m[35mCREATE  INDEX  "index_accounts_on_user_id" ON "accounts"  ("user_id")[0m
+  ↳ db/migrate/20190320100604_create_accounts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190320100604"]]
+  ↳ bin/rails:4
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateTransaktions (20190320135338)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (73.6ms)[0m  [1m[35mCREATE TABLE "transaktions" ("id" bigserial primary key, "account_id" bigint, "trans_set" character varying, "balance" float, "trans_type" character varying, "amount" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_4a689f62f6"
+FOREIGN KEY ("account_id")
+  REFERENCES "accounts" ("id")
+)[0m
+  ↳ db/migrate/20190320135338_create_transaktions.rb:3
+  [1m[35m (34.9ms)[0m  [1m[35mCREATE  INDEX  "index_transaktions_on_account_id" ON "transaktions"  ("account_id")[0m
+  ↳ db/migrate/20190320135338_create_transaktions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190320135338"]]
+  ↳ bin/rails:4
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateAgencies (20190325125401)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (66.9ms)[0m  [1m[35mCREATE TABLE "agencies" ("id" bigserial primary key, "business_name" character varying, "location" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_2b1d253475"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20190325125401_create_agencies.rb:3
+  [1m[35m (27.3ms)[0m  [1m[35mCREATE  INDEX  "index_agencies_on_user_id" ON "agencies"  ("user_id")[0m
+  ↳ db/migrate/20190325125401_create_agencies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190325125401"]]
+  ↳ bin/rails:4
+  [1m[35m (18.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to ChangePhoneToString (20190326094204)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (167.8ms)[0m  [1m[35mALTER TABLE "users" ALTER COLUMN "phone_number" TYPE character varying[0m
+  ↳ db/migrate/20190326094204_change_phone_to_string.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190326094204"]]
+  ↳ bin/rails:4
+  [1m[35m (18.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddAccountPolymorphicAssociation (20190326123830)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "accounts" ADD "owner_id" integer[0m
+  ↳ db/migrate/20190326123830_add_account_polymorphic_association.rb:3
+  [1m[35m (40.0ms)[0m  [1m[35mALTER TABLE "accounts" ADD "owner_type" character varying[0m
+  ↳ db/migrate/20190326123830_add_account_polymorphic_association.rb:4
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "accounts" DROP COLUMN "user_id"[0m
+  ↳ db/migrate/20190326123830_add_account_polymorphic_association.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190326123830"]]
+  ↳ bin/rails:4
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to ChangeBalanceDefaultOnAccount (20190327093807)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "accounts" ALTER COLUMN "balance" SET DEFAULT 0[0m
+  ↳ db/migrate/20190327093807_change_balance_default_on_account.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190327093807"]]
+  ↳ bin/rails:4
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to ChangeIdSequenceOnAgency (20190327125103)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35m      ALTER SEQUENCE agencies_id_seq
+        START 10001
+        MINVALUE 10001
+        RESTART
+[0m
+  ↳ db/migrate/20190327125103_change_id_sequence_on_agency.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190327125103"]]
+  ↳ bin/rails:4
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddJtiColumn (20190402130003)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (182.1ms)[0m  [1m[35mALTER TABLE "users" ADD "jti" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20190402130003_add_jti_column.rb:3
+  [1m[35m (44.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_jti" ON "users"  ("jti")[0m
+  ↳ db/migrate/20190402130003_add_jti_column.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190402130003"]]
+  ↳ bin/rails:4
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-17 08:18:26.725288"], ["updated_at", "2019-04-17 08:18:26.725288"]]
+  ↳ bin/rails:4
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for 172.18.0.1 at 2019-04-17 08:18:32 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-04-17 09:32:37 +0000
+Started GET "/" for 172.18.0.1 at 2019-04-17 09:33:00 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (156.1ms)
+Completed 200 OK in 688ms (Views: 306.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (0.2ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 172.18.0.1 at 2019-04-17 09:33:07 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 172.18.0.1 at 2019-04-17 09:33:15 +0000
+Processing by Rails::WelcomeController#index as */*
+  Rendering /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 61ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-04-17 09:33:23 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (110.2ms)
+Completed 200 OK in 318ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 172.18.0.1 at 2019-04-17 09:33:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/statement" for 172.18.0.1 at 2019-04-17 09:33:31 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.6ms)
+StatementMailer#send_statement: processed outbound mail in 145.8ms
+Sent mail to tomnyongesa5@gmail.com (170.6ms)
+Date: Wed, 17 Apr 2019 09:33:36 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f2f01b3a8_12ac60634436474964@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 3136ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 172.18.0.1 at 2019-04-17 09:35:18 +0000
+Processing by StatementController#statement as */*
+Completed 500 Internal Server Error in 454ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `snd_statement' for StatementMailer:Class):
+  
+app/controllers/statement_controller.rb:4:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-17 09:35:31 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.4ms)
+StatementMailer#send_statement: processed outbound mail in 63.4ms
+Sent mail to tomnyongesa5@gmail.com (63.5ms)
+Date: Wed, 17 Apr 2019 09:35:31 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f3635bb89_12ac60634414875011@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 135ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 09:39:10 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (1.1ms)
+StatementMailer#send_statement: processed outbound mail in 49.8ms
+Sent mail to tomnyongesa5@gmail.com (14.2ms)
+Date: Wed, 17 Apr 2019 09:39:10 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f43ee29f7_12ac6063443647515@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 65ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 09:46:31 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (34.0ms)
+StatementMailer#send_statement: processed outbound mail in 98.4ms
+Sent mail to tomnyongesa5@gmail.com (53.6ms)
+Date: Wed, 17 Apr 2019 09:46:32 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f5f8bb303_12ac6063442d8752ae@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 167ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 09:46:55 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (7.4ms)
+StatementMailer#send_statement: processed outbound mail in 15.2ms
+Sent mail to tomnyongesa5@gmail.com (1.5ms)
+Date: Wed, 17 Apr 2019 09:46:55 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f60f1155f_12ac6063441487533f@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 09:53:08 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (12.3ms)
+StatementMailer#send_statement: processed outbound mail in 30.2ms
+Sent mail to tomnyongesa5@gmail.com (13.8ms)
+Date: Wed, 17 Apr 2019 09:53:08 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f784d50bb_12ac6063442247542@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 54ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 09:55:39 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (51.4ms)
+StatementMailer#send_statement: processed outbound mail in 148.9ms
+Sent mail to tomnyongesa5@gmail.com (50.8ms)
+Date: Wed, 17 Apr 2019 09:55:39 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f81bbc686_12ac6063442d875531@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 251ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 09:55:44 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.8ms)
+StatementMailer#send_statement: processed outbound mail in 55.6ms
+Sent mail to tomnyongesa5@gmail.com (9.9ms)
+Date: Wed, 17 Apr 2019 09:55:44 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f8201c8a4_12ac6063444047566e@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 74ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 09:56:05 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (5.3ms)
+StatementMailer#send_statement: processed outbound mail in 106.8ms
+Sent mail to tomnyongesa5@gmail.com (73.3ms)
+Date: Wed, 17 Apr 2019 09:56:05 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f8355bde7_12ac60634436475755@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 199ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 10:01:47 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.3ms)
+StatementMailer#send_statement: processed outbound mail in 26.9ms
+Sent mail to tomnyongesa5@gmail.com (6.6ms)
+Date: Wed, 17 Apr 2019 10:01:54 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6f992999b2_12ac60634422475857@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 426ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 10:08:27 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.4ms)
+StatementMailer#send_statement: processed outbound mail in 8.8ms
+Sent mail to tomnyongesa5@gmail.com (1.8ms)
+Date: Wed, 17 Apr 2019 10:08:27 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6fb1b90431_12ac6063442d8759be@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 63ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 10:28:10 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.4ms)
+StatementMailer#send_statement: processed outbound mail in 6.6ms
+Sent mail to tomnyongesa5@gmail.com (6.0ms)
+Date: Wed, 17 Apr 2019 10:28:11 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb6ffbb1e448_12ac60634440476048@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 10:34:38 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.4ms)
+StatementMailer#send_statement: processed outbound mail in 6.9ms
+Sent mail to tomnyongesa5@gmail.com (1.6ms)
+Date: Wed, 17 Apr 2019 10:34:38 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb7013e1dc8d_12ac606344148761e4@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 10:36:16 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.4ms)
+StatementMailer#send_statement: processed outbound mail in 7.2ms
+Sent mail to tomnyongesa5@gmail.com (1.5ms)
+Date: Wed, 17 Apr 2019 10:36:16 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb701a0ac4dc_12ac60634422476257@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 154.70.39.153 at 2019-04-17 12:15:03 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (761.5ms)
+Completed 200 OK in 2155ms (Views: 1356.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 154.70.39.153 at 2019-04-17 12:15:17 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 12:15:38 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (29.1ms)
+StatementMailer#send_statement: processed outbound mail in 765.6ms
+Sent mail to tomnyongesa5@gmail.com (667.0ms)
+Date: Wed, 17 Apr 2019 12:15:39 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb718ebc4435_12ac606344364763f0@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 1462ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 154.70.39.153 at 2019-04-17 12:15:49 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (37.3ms)
+Completed 200 OK in 175ms (Views: 174.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 154.70.39.153 at 2019-04-17 12:15:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 12:17:01 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.5ms)
+StatementMailer#send_statement: processed outbound mail in 29.6ms
+Sent mail to tomnyongesa5@gmail.com (3.0ms)
+Date: Wed, 17 Apr 2019 12:17:01 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cb7193d4b741_12ac60634436476421@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 34ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 12:28:33 +0000
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.3ms)
+StatementMailer#send_statement: processed outbound mail in 5.2ms
+Sent mail to tomnyongesa@outlook.com (48.8ms)
+Date: Wed, 17 Apr 2019 12:28:34 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa@outlook.com
+Message-ID: <5cb71bf24bc3a_12ac6063442d876542@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 89ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 12:50:20 +0000
+Processing by StatementController#statement as HTML
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (177.8ms)
+StatementMailer#send_statement: processed outbound mail in 306.2ms
+Sent mail to tomnyongesa@outlook.com (368.2ms)
+Date: Wed, 17 Apr 2019 12:50:22 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa@outlook.com
+Message-ID: <5cb7210ee74ef_12ac60634440476614@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 698ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 12:50:33 +0000
+Processing by StatementController#statement as HTML
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (19.1ms)
+StatementMailer#send_statement: processed outbound mail in 28.2ms
+Sent mail to tomnyongesa@outlook.com (3.4ms)
+Date: Wed, 17 Apr 2019 12:50:33 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa@outlook.com
+Message-ID: <5cb721192cb62_12ac606344148767dc@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 56ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 12:51:05 +0000
+Processing by StatementController#statement as HTML
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (0.7ms)
+StatementMailer#send_statement: processed outbound mail in 63.4ms
+Sent mail to tomnyongesa@outlook.com (13.8ms)
+Date: Wed, 17 Apr 2019 12:51:05 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa@outlook.com
+Message-ID: <5cb72139c74b6_12ac606344224768d5@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 79ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-17 12:53:47 +0000
+  [1m[35m (61.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (1.8ms)
+StatementMailer#send_statement: processed outbound mail in 201.0ms
+Sent mail to tomnyongesa@outlook.com (4284.1ms)
+Date: Wed, 17 Apr 2019 12:53:50 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa@outlook.com
+Message-ID: <5cb721de13be2_12aebec09285860093@eb938a0db47b.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Statement</h1>
+    Total balance = 20000.00
+  </body>
+</html>
+
+Completed 204 No Content in 5225ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:43:13 +0000
+  [1m[35m (55.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (61.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 158ms (Views: 0.1ms | ActiveRecord: 123.9ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:44:07 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:45:07 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:46:30 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 5.6ms)
+
+
+  
+NameError (undefined local variable or method `ransaktion' for #<StatementController:0x0000559687470630>
+Did you mean?  transaktions):
+  
+app/controllers/statement_controller.rb:4:in `statement'
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:48:51 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:50:31 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:51:18 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:51:38 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:53:06 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:54:22 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:54:34 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:58:42 +0000
+Processing by StatementController#statement as */*
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 07:59:35 +0000
+Processing by StatementController#statement as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:01:20 +0000
+Processing by StatementController#statement as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:01:35 +0000
+Processing by StatementController#statement as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 154.70.39.153 at 2019-04-18 08:01:36 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:05:24 +0000
+Processing by StatementController#statement as */*
+  [1m[36mTransaktion Load (22.5ms)[0m  [1m[34mSELECT "transaktions".* FROM "transaktions"[0m
+  ↳ app/controllers/statement_controller.rb:5
+Completed 200 OK in 29ms (Views: 2.4ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:10:01 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:10:38 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (0.6ms)[0m  [1m[34mSELECT "transaktions".* FROM "transaktions"[0m
+  ↳ app/controllers/statement_controller.rb:5
+Completed 200 OK in 63ms (Views: 1.6ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:16:01 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 65ms (Views: 0.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:18:10 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:26:33 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:26:55 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:27:40 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:55:36 +0000
+  [1m[35m (28.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (62.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 82.8ms)
+
+
+  
+NoMethodError (undefined method `attribute_reader' for Statement:Class
+Did you mean?  attr_reader):
+  
+app/models/statement.rb:13:in `<class:Statement>'
+app/models/statement.rb:2:in `<main>'
+app/controllers/statement_controller.rb:5:in `statement'
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:56:09 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.9ms)
+
+
+  
+NameError (undefined local variable or method `transactions' for #<StatementController:0x000055fa7520ef20>
+Did you mean?  transaktions):
+  
+app/controllers/statement_controller.rb:5:in `statement'
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:56:39 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 204 No Content in 12ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 08:58:10 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 204 No Content in 11ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 09:01:31 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 204 No Content in 12ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 09:05:03 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 6.1ms)
+
+
+  
+NameError (uninitialized constant Statement::PDFkit):
+  
+app/models/statement.rb:9:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 09:06:22 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 1084ms (ActiveRecord: 8.5ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 09:07:32 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 366ms (ActiveRecord: 6.1ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/deploy/app/public/statement.pdf):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 09:11:20 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 378ms (ActiveRecord: 5.4ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 154.70.39.153 at 2019-04-18 09:13:57 +0000
+  [1m[35m (27.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (52.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 895ms (ActiveRecord: 63.9ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 09:24:29 +0000
+  [1m[35m (28.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (65.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 85.4ms)
+
+
+  
+PDFKit::NoExecutableError (No wkhtmltopdf executable found at 
+>> Please install wkhtmltopdf - https://github.com/pdfkit/PDFKit/wiki/Installing-WKHTMLTOPDF):
+  
+app/models/statement.rb:9:in `new'
+app/models/statement.rb:9:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 09:28:47 +0000
+  [1m[35m (27.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (60.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 730ms (ActiveRecord: 81.1ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 09:38:05 +0000
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 955ms (ActiveRecord: 6.8ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 10:06:41 +0000
+  [1m[35m (28.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (33.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 668ms (ActiveRecord: 52.8ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 10:12:41 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 7.9ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:13:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 10:19:59 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 8.6ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:14:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 10:22:48 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 5.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/models/statement.rb:14:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 10:23:26 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 6.2ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:14:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:22:51 +0000
+  [1m[35m (27.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (108.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 129.4ms)
+
+
+  
+LoadError (cannot load such file -- pdfkit):
+  
+app/models/statement.rb:2:in `<main>'
+app/controllers/statement_controller.rb:5:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:23:21 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (47.7ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 5.0ms)
+
+
+  
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `respond_to' for #<Statement:0x00005572ffbf46c8>
+Did you mean?  respond_to?):
+  
+app/models/statement.rb:15:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:25:53 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (0.4ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.6ms)
+
+
+  
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `request' for #<Statement:0x00005572fdfd7328>
+Did you mean?  require):
+  
+app/models/statement.rb:15:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:27:18 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (0.6ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+  [1m[36mCACHE Transaktion Load (0.3ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `request' for #<Statement:0x00005572ffa69fb0>
+Did you mean?  require):
+  
+app/models/statement.rb:15:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:29:42 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 5.3ms)
+
+
+  
+NameError (uninitialized constant Statement::PDFKit):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:30:30 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 3.6ms)
+
+
+  
+LoadError (cannot load such file -- pdfkit):
+  
+app/models/statement.rb:2:in `<main>'
+app/controllers/statement_controller.rb:5:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:37:42 +0000
+  [1m[35m (28.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (130.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 875ms (ActiveRecord: 148.8ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:14:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:50:53 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 377ms (ActiveRecord: 8.7ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:14:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:51:42 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.7ms)
+
+
+  
+SyntaxError (/home/deploy/app/app/models/statement.rb:13: syntax error, unexpected ',', expecting ')'
+        ,page_size: 'A4')
+        ^
+/home/deploy/app/app/models/statement.rb:13: syntax error, unexpected ')', expecting keyword_end
+        ,page_size: 'A4')
+                        ^):
+  
+app/models/statement.rb:13: syntax error, unexpected ',', expecting ')'
+app/models/statement.rb:13: syntax error, unexpected ')', expecting keyword_end
+app/controllers/statement_controller.rb:5:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:52:40 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::MissingTemplate (Missing template layouts/application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/deploy/app/app/views"
+  * "/usr/local/bundle/gems/devise-4.6.1/app/views"
+):
+  
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:54:59 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::MissingTemplate (Missing template layouts/application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/deploy/app/app/views"
+  * "/usr/local/bundle/gems/devise-4.6.1/app/views"
+):
+  
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:56:04 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::MissingTemplate (Missing template /mailer.html.erb with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :api_json, :json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/deploy/app/app/views"
+  * "/usr/local/bundle/gems/devise-4.6.1/app/views"
+):
+  
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:56:19 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::MissingTemplate (Missing template layouts/application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/deploy/app/app/views"
+  * "/usr/local/bundle/gems/devise-4.6.1/app/views"
+):
+  
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:56:56 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::MissingTemplate (Missing template layouts/application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/deploy/app/app/views"
+  * "/usr/local/bundle/gems/devise-4.6.1/app/views"
+):
+  
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:58:28 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::MissingTemplate (Missing template layouts/application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/deploy/app/app/views"
+  * "/usr/local/bundle/gems/devise-4.6.1/app/views"
+):
+  
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:58:46 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::MissingTemplate (Missing template app/views/statement/statement.html.erb with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :api_json, :json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/deploy/app/app/views"
+  * "/usr/local/bundle/gems/devise-4.6.1/app/views"
+):
+  
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 12:59:04 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::MissingTemplate (Missing template app/views/statement/statement.html.erb with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :api_json, :json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "/home/deploy/app/app/views"
+  * "/usr/local/bundle/gems/devise-4.6.1/app/views"
+):
+  
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:01:19 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering statement/statement.html.erb within layouts/mailer.html.erb
+  Rendered statement/statement.html.erb within layouts/mailer.html.erb (192.3ms)
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 5.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `transaktions' for #<#<Class:0x00005556d89a2c78>:0x00005556d9503298>
+Did you mean?  translate):
+    10:     </tr>
+    11:   </thead>
+    12:   <tbody>
+    13:     <% transaktions.each do |transaction| %>
+    14:       <tr>
+    15:         <td><%= transaction.trans_set %></td>
+    16:         <td><%= transaction.account_id %></td>
+  
+app/views/statement/statement.html.erb:13:in `_app_views_statement_statement_html_erb__1846485369136435493_46915750607840'
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:03:50 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering statement/statement.html.erb within layouts/mailer.html.erb
+  Rendered statement/statement.html.erb within layouts/mailer.html.erb (106.7ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `transaktions' for #<#<Class:0x00005556d89a2c78>:0x00005556d9467000>
+Did you mean?  translate):
+    10:     </tr>
+    11:   </thead>
+    12:   <tbody>
+    13:     <% transaktions.each do |transaction| %>
+    14:       <tr>
+    15:         <td><%= transaction.trans_set %></td>
+    16:         <td><%= transaction.account_id %></td>
+  
+app/views/statement/statement.html.erb:13:in `_app_views_statement_statement_html_erb__1846485369136435493_46915750359860'
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:04:05 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering statement/statement.html.erb within layouts/mailer.html.erb
+  Rendered statement/statement.html.erb within layouts/mailer.html.erb (101.2ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `transaktions' for #<#<Class:0x00005556d89a2c78>:0x00005556d8fe8f88>
+Did you mean?  translate):
+    10:     </tr>
+    11:   </thead>
+    12:   <tbody>
+    13:     <% transaktions.each do |transaction| %>
+    14:       <tr>
+    15:         <td><%= transaction.trans_set %></td>
+    16:         <td><%= transaction.account_id %></td>
+  
+app/views/statement/statement.html.erb:13:in `_app_views_statement_statement_html_erb__1846485369136435493_46915748040840'
+app/models/statement.rb:16:in `as_html'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:04:48 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering statement/statement.html.erb within layouts/mailer.html.erb
+  Rendered statement/statement.html.erb within layouts/mailer.html.erb (0.4ms)
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 0.5ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:06:08 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 5.0ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:13:59 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 5.6ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:14:37 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 4.5ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:14:56 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 5.5ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:17:11 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 3.6ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:34:53 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 663ms (ActiveRecord: 10.6ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:14:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:46:16 +0000
+Processing by StatementController#statement as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 1289ms (ActiveRecord: 12.0ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:14:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/favicon.ico" for 172.18.0.1 at 2019-04-18 13:46:18 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:54:08 +0000
+Processing by StatementController#statement as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 4.2ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:14:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:58:59 +0000
+Processing by StatementController#statement as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 371ms (ActiveRecord: 30.5ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/favicon.ico" for 172.18.0.1 at 2019-04-18 13:58:59 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 13:59:06 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 0.6ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 14:31:24 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 8.5ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - statement.pdf):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 14:55:49 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 436ms (ActiveRecord: 7.4ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - #{Rails.root}/public/statement.pdf):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-18 14:56:30 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 3.7ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/deploy/app/public/statement.pdf):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 07:34:02 +0000
+  [1m[35m (28.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (45.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 711ms (ActiveRecord: 84.7ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/deploy/app/public/statement.pdf):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 07:45:36 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 8.0ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/deploy/app/public/statement.pdf):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 07:48:07 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (39.9ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 5.8ms)
+
+
+  
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `respond_to' for #<Statement:0x0000561d3c4d7ab0>
+Did you mean?  respond_to?):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 07:53:32 +0000
+  [1m[35m (29.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (119.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (26.6ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 137.3ms)
+
+
+  
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `respond_to' for #<Statement:0x00005650379f7cb0>
+Did you mean?  respond_to?):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 07:58:01 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (0.6ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.9ms)
+
+
+  
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `request' for #<Statement:0x0000565039846e78>
+Did you mean?  require):
+  
+app/models/statement.rb:13:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 08:01:50 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 4.9ms)
+
+
+  
+SyntaxError (/home/deploy/app/app/models/statement.rb:22: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/statement.rb:22: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/statement_controller.rb:5:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 08:02:06 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 3.5ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com/" -):
+  
+app/models/statement.rb:13:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 08:27:54 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 368ms (ActiveRecord: 5.3ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com/" -):
+  
+app/models/statement.rb:13:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 08:47:49 +0000
+  [1m[35m (29.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (52.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 418ms (ActiveRecord: 70.9ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/deploy/app/public/statement.pdf):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 08:48:19 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 313ms (ActiveRecord: 4.1ms)
+
+
+  
+RuntimeError (command failed (exitstatus=1): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 08:48:25 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 0.6ms)
+
+
+  
+RuntimeError (command failed (exitstatus=1): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 08:48:28 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 0.5ms)
+
+
+  
+RuntimeError (command failed (exitstatus=1): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 09:01:19 +0000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 37.8ms)
+
+
+  
+RuntimeError (command failed (exitstatus=1): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 09:09:20 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (22.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 482ms (ActiveRecord: 52.0ms)
+
+
+  
+RuntimeError (command failed (exitstatus=1): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 09:24:43 +0000
+  [1m[35m (28.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (118.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 537ms (ActiveRecord: 164.1ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/" for 172.18.0.1 at 2019-04-23 09:25:58 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (30.8ms)
+Completed 200 OK in 172ms (Views: 171.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 172.18.0.1 at 2019-04-23 09:25:59 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 09:26:04 +0000
+Processing by StatementController#statement as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 0.7ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 09:34:42 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 727ms (ActiveRecord: 4.6ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 09:39:29 +0000
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 6.6ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 09:54:04 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 352ms (ActiveRecord: 6.0ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 11:08:31 +0000
+  [1m[35m (28.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (146.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 183.3ms)
+
+
+  
+PDFKit::NoExecutableError (No wkhtmltopdf executable found at 
+>> Please install wkhtmltopdf - https://github.com/pdfkit/PDFKit/wiki/Installing-WKHTMLTOPDF):
+  
+app/models/statement.rb:10:in `new'
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 11:13:39 +0000
+  [1m[35m (27.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (32.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 52.9ms)
+
+
+  
+RuntimeError (command failed (exitstatus=0): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 12:00:03 +0000
+  [1m[35m (45.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (50.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 69.1ms)
+
+
+  
+RuntimeError (command failed (exitstatus=126): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 12:18:50 +0000
+  [1m[35m (28.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (121.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 173.5ms)
+
+
+  
+RuntimeError (command failed (exitstatus=2): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 12:32:04 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 8.7ms)
+
+
+  
+RuntimeError (command failed (exitstatus=2): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 12:37:17 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms)
+
+
+  
+RuntimeError (command failed (exitstatus=2): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 12:42:08 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+RuntimeError (command failed (exitstatus=2): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 12:49:33 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 5.1ms)
+
+
+  
+RuntimeError (command failed (exitstatus=2): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 - -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 14:24:22 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 204 No Content in 27ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 14:25:23 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.8ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_file_s_size - /home/deploy/app/public/statement.pdf):
+  
+app/models/statement.rb:11:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 14:36:38 +0000
+  [1m[35m (27.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (35.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 53.8ms)
+
+
+  
+RuntimeError (command failed (exitstatus=2): /usr/local/bundle/bin/wkhtmltopdf --quiet --page-size Letter --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in --encoding UTF-8 "http://google.com/" -):
+  
+app/models/statement.rb:10:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 14:40:17 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (31.5ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 5.4ms)
+
+
+  
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `respond_to' for #<Statement:0x0000560b973f7e30>
+Did you mean?  respond_to?):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 14:42:36 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (0.8ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 5.4ms)
+
+
+  
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `request' for #<Statement:0x0000560b956288a0>
+Did you mean?  require):
+  
+app/models/statement.rb:12:in `generate_pdf'
+app/controllers/statement_controller.rb:6:in `statement'
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 14:46:06 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:3
+  [1m[36mTransaktion Load (2.5ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 4.1ms)
+
+
+  
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `respond_to' for #<StatementController:0x0000560b964cf728>
+Did you mean?  respond_to?
+               respond_with
+               responder
+               responder?
+               responder=):
+  
+app/controllers/statement_controller.rb:8:in `statement'
+  [1m[36mCACHE Transaktion Load (0.0ms)[0m  [1m[34mSELECT  "transaktions".* FROM "transaktions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 14:46:43 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:4
+Completed 204 No Content in 10ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 14:48:13 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:4
+Completed 204 No Content in 9ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/statement.pdf" for 172.18.0.1 at 2019-04-23 14:50:24 +0000
+Processing by StatementController#statement as PDF
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:4
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/statement.pdf" for 172.18.0.1 at 2019-04-23 14:50:44 +0000
+Processing by StatementController#statement as PDF
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:4
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/favicon.ico" for 172.18.0.1 at 2019-04-23 14:50:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/statement" for 172.18.0.1 at 2019-04-23 14:52:10 +0000
+Processing by StatementController#statement as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:4
+Completed 204 No Content in 2ms (ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 154.70.39.153 at 2019-04-25 12:56:35 +0000
+  [1m[35m (65.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"data"=>{"type"=>"user", "attributes"=>{"full_name"=>"some guy", "phone_number"=>"0701100110", "email"=>"user@example.com", "password"=>"[FILTERED]"}}, "user"=>{}}
+Unpermitted parameter: :type
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (63.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = $1 LIMIT $2[0m  [["phone_number", "0701100110"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 422 Unprocessable Entity in 891ms (Views: 1.0ms | ActiveRecord: 172.5ms)
+
+
+Started POST "/users" for 154.70.39.153 at 2019-04-25 12:57:08 +0000
+Processing by UsersController#create as */*
+  Parameters: {"data"=>{"type"=>"user", "attributes"=>{"full_name"=>"some guy", "phone_number"=>"0701100110", "email"=>"tomnyongesa5@gmail.com", "password"=>"[FILTERED]"}}, "user"=>{}}
+Unpermitted parameter: :type
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tomnyongesa5@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = $1 LIMIT $2[0m  [["phone_number", "0701100110"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Create (76.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "phone_number", "full_name", "created_at", "updated_at", "jti") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "tomnyongesa5@gmail.com"], ["encrypted_password", "$2a$11$2XXKzFcyFOTULTI4pklEleUHyLwtKqbxMdZmbqWNW6a/d0ZINR2iG"], ["phone_number", "0701100110"], ["full_name", "some guy"], ["created_at", "2019-04-25 12:57:09.022812"], ["updated_at", "2019-04-25 12:57:09.022812"], ["jti", "c6b8a0f2-030f-4073-bbc9-22a6a2ef524d"]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mAccount Create (33.9ms)[0m  [1m[32mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "owner_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2019-04-25 12:57:09.570047"], ["updated_at", "2019-04-25 12:57:09.570047"], ["owner_id", 1], ["owner_type", "User"]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."owner_id" = $1 AND "accounts"."owner_type" = $2 LIMIT $3[0m  [["owner_id", 1], ["owner_type", "User"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 201 Created in 808ms (Views: 19.6ms | ActiveRecord: 142.8ms)
+
+
+Started GET "/login" for 154.70.39.153 at 2019-04-25 12:58:13 +0000
+Processing by LoginsController#new as */*
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 154.70.39.153 at 2019-04-25 13:00:28 +0000
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (5.2.2) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.0.6) lib/rack/builder.rb:153:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware.rb:23:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/1/accounts" for 154.70.39.153 at 2019-04-25 13:01:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/accounts"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/accounts/454545/statement?start_date=20190112121212&end_date=20191212121212" for 154.70.39.153 at 2019-04-25 13:06:00 +0000
+Processing by StatementController#get_statement as */*
+  Parameters: {"start_date"=>"20190112121212", "end_date"=>"20191212121212", "account_id"=>"454545"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 154.70.39.153 at 2019-04-25 13:06:01 +0000
+Processing by LoginsController#new as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/1/statement?start_date=20190112121212&end_date=20191212121212" for 154.70.39.153 at 2019-04-25 13:10:45 +0000
+Processing by StatementController#get_statement as */*
+  Parameters: {"start_date"=>"20190112121212", "end_date"=>"20191212121212", "account_id"=>"1"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 154.70.39.153 at 2019-04-25 13:10:46 +0000
+Processing by LoginsController#new as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/1/statement?start_date=20190112121212&end_date=20191212121212" for 154.70.39.153 at 2019-04-25 13:11:54 +0000
+Processing by StatementController#get_statement as */*
+  Parameters: {"start_date"=>"20190112121212", "end_date"=>"20191212121212", "account_id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "tomnyongesa5@gmail.com"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/statement_controller.rb:10
+  Rendering statement_mailer/send_statement.html.erb within layouts/mailer
+  Rendered statement_mailer/send_statement.html.erb within layouts/mailer (7.5ms)
+  [1m[36mTransaktion Load (55.1ms)[0m  [1m[34mSELECT "transaktions".* FROM "transaktions" WHERE "transaktions"."created_at" BETWEEN $1 AND $2 AND "transaktions"."account_id" = $3[0m  [["created_at", "2019-01-12"], ["created_at", "2019-12-12"], ["account_id", 1]]
+  ↳ app/views/layouts/mailer.html.erb:21
+StatementMailer#send_statement: processed outbound mail in 144.2ms
+Sent mail to tomnyongesa5@gmail.com (9429.4ms)
+Date: Thu, 25 Apr 2019 13:11:55 +0000
+From: juandsmithj@gmail.com
+To: tomnyongesa5@gmail.com
+Message-ID: <5cc1b21b66548_12ab470dbf8f456653@5b4384602ca8.mail>
+Subject: Statement
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+    <table border="1px" cellspacing="0">
+      <thead>
+        <th>Transaction</th>
+        <th>Account</th>
+        <th>Transaction type</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </thead>
+      <tbody>
+  </body>
+
+</html>
+
+Completed 204 No Content in 10176ms (ActiveRecord: 60.1ms)
+
+

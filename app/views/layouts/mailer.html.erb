@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+    <table border="1px" cellspacing="0">
+      <thead>
+        <th>Transaction</th>
+        <th>Account</th>
+        <th>Transaction type</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </thead>
+      <tbody>
+        <%@transaktions.each do |txn|  %>
+        <tr>
+          <td><%=txn["trans_set"]%></td>
+          <td><%=txn["account_id"]%></td>
+          <td><%= txn["trans_type"]%></td>
+          <td><%= txn["amount"]%></td>
+          <td><%= txn["created_at"]%></td>
+        </tr>         
+      </tbody>
+    </table>
+    <% end -%>
+  </body>
+
+</html>
