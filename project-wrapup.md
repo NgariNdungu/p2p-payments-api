@@ -51,5 +51,6 @@ There's a start-up delay as heroku starts things up so, if the first request fai
 - [Project Staging Server URL](https://green-mamba-staging.herokuapp.com/) - if you get a blank page, you're home!
 
 ### UI Development:
-Unstarted
+**Unstarted**  
+
 Mockups available [here](https://github.com/NgariNdungu/p2p-payments-api/blob/develop/design/product%20design/mockups.png)
