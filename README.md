@@ -16,9 +16,17 @@ $ git clone https://github.com/NgariNdungu/p2p-payments-api.git
 ```
 2. cd into project directory and build image
 ```bash
-$ cd p2p-payments-api && docker-compose build
+$ cd p2p-payments-api
 ```
-3. Run
+3. Checkout to the develop branch
+```bash
+$ git checkout -b develop
+```
+4. Build image
+```
+$ docker-compose build
+```
+5. Run
 ```bash
 $ docker-compose up -d
 ```
