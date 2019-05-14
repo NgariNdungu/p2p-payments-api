@@ -2,6 +2,8 @@
 
 A peer to peer money transfer system built using rails on docker.
 
+**This is a review project and is not to be used for commercial purposes.**
+
 [see documentation](https://app.swaggerhub.com/apis-docs/NgariNdungu/green-mamba-re/1.0.0).
 
 ## Prerequisites
