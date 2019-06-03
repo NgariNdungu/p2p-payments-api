@@ -1,0 +1,18 @@
+language: ruby
+services:
+- docker
+install:
+- docker-compose build
+script:
+- docker-compose run -u root -e RAILS_ENV=test -e CI=true api bin/rails db:create
+- docker-compose run -u root -e CI=true api bin/rails test
+deploy:
+  provider: heroku
+  api_key:
+    secure: mONV/cPLry6SqLStnTtp3PcQWWJF8c5kRHbyA64Cyn4Krnuc6090t6gEa3Ty6Cd89TT/gLEtskM8QozuMoAymKoPIB6wqJQ13A/oa8kffOn/1t38GGmrGu+nbwwP7mVDLGUvzselLOIaNeJxibq20gS+D5VopiojvmEQPd1zC6WBpBi0bb7Ka68Fr2zsMnB0rrq7l/hi1OnwZD6TdzOzgf2ULCZSKJ7fkVv5KW3XnSpaQt07todntKhI5VnUy2QG1ovUkAulRk/Lxc4CYR9nL2/ol8aO9BOB27UmyMsNO7jAOqUYOdHeRGIsWNsOG77bOBhxlHT6nPOo0yy2++j6ln1AwA8abYebONZRoeoarG6gvGhI/qOgNnE5HaGOcgew9/K7A3HuQRXtQvVuieMKW09Ht/n4fkHYrPym6Ip5g2mrRSf5FrRPTpsu8XCXUcQd4mOWYR9TpqTdPs7wj0DcDnbAm/sj1AbLPetPz1FeLrcVLaawBJsSyqIXEYOVvb+ImMpMkAaVHDbNd5ALX0kQCMLwTPQUfmVJN6JZEnrpDZZRnVU4afBAeyl8YSuJqvYK7GAU9OwMozEBu6CYCT/p+s+sscRGQBqzuTw6/EKSRLpayxP8aFlLuLiPzEuRBeSVjPeY9mFuLq8SqMPVquDXFXHLE+vxqrWXcsW9BhxR60I=
+  app: green-mamba-staging
+  on:
+    repo: NgariNdungu/p2p-payments-api
+    branch: develop
+  run:
+    - "bin/rails db:migrate"

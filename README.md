@@ -2,6 +2,8 @@
 
 A peer to peer money transfer system built using rails on docker.
 
+**This is a review project and is not to be used for commercial purposes.**
+
 [see documentation](https://app.swaggerhub.com/apis-docs/NgariNdungu/green-mamba-re/1.0.0).
 
 ## Prerequisites
@@ -16,9 +18,17 @@ $ git clone https://github.com/NgariNdungu/p2p-payments-api.git
 ```
 2. cd into project directory and build image
 ```bash
-$ cd p2p-payments-api && docker-compose build
+$ cd p2p-payments-api
 ```
-3. Run
+3. Checkout to the develop branch
+```bash
+$ git checkout -b develop
+```
+4. Build image
+```
+$ docker-compose build
+```
+5. Run
 ```bash
 $ docker-compose up -d
 ```
