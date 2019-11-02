@@ -10,7 +10,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Authentication
-gem 'devise', '~> 4.2'
+gem 'devise', '~> 4.7'
 #  Token based auth with devise
 gem 'devise-jwt', '~> 0.5.9'
 
